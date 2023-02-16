@@ -8,7 +8,7 @@ export const scrapeForVenues = async (url) => {
   const linkTexts = await page.$$eval("h3.panel-title a", (elements) =>
     elements.map((item) => ({
       name: item.textContent.trim(),
-      path: item.getAttribute("href"),
+      path: item.getAttribute("href").replace('/organizations/',''),
     }))
   );
 

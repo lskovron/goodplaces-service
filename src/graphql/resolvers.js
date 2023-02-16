@@ -1,4 +1,4 @@
-import { createVenue } from "../mongo/mongoSchema.js";
+import { getVenue, createOrUpdateVenue } from "../mongo/utils.js";
 
 export const resolvers = {
   Query: {
@@ -9,15 +9,19 @@ export const resolvers = {
     //   }
     //   return reports.map(translateReportDocument)
     },
-    venue: async (_, args, context) => {
+    venue: async (_, args) => {
+      const { input } = args;
+      return getVenue(input);
+      // return findVenue(args);
     //   const results = await reportUtils.getReport(context.user, args.id)
     //   return translateReportDocument(results)
     },
   },
   Mutation: {
-    createVenue: async (_, args, context) => {
+    createVenue: async (_, args) => {
       console.log(args);
-      createVenue(args);
+      const { input } = args;
+      return createOrUpdateVenue(input);
     //   const newReport = args
     //   const result = await reportUtils.createReport(context.user, newReport)
     //   return translateReportDocument(result)

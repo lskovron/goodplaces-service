@@ -1,7 +1,8 @@
+import { createOrUpdateVenue } from "../mongo/utils.js";
 import { getVenueInfo } from "./getVenueInfo.js";
 import { scrapeForVenues, scrapeForEvents } from "./scrapers.js";
 
-const executeThread = async () => {
+const saveVenuesToDatabase = async () => {
   console.log('******************** SCRAPING VENUES ********************')
 
   const venues = await scrapeForVenues(
@@ -21,17 +22,33 @@ const executeThread = async () => {
       });
     })
   );
+  
+  console.log('******************** UPDATED VENUES ********************')
+  await createOrUpdateVenue(placeList[0])
 
-  console.log(placeList);
+  // console.log(placeList);
+  // let updatedVenues = [];
+  // await Promise.all(
+  //   placeList.map(
+  //     async (place) => {
+  //       const updatedPlace = await createOrUpdateVenue(place)
+  //       updatedVenues.push(updatedPlace);
+  //     }
+  //   )
+  // )
 
 
-  // get events
-  console.log('******************** SCRAPING EVENTS ********************')
-  console.log(placeList[0])
+  console.log('******************** UPDATED VENUES ********************')
+  console.log(updatedVenues)
 
-  const path = `https://www.wwoz.org${placeList[0].path}`;
-  const events = await scrapeForEvents(path);
-  console.log(events);
+
+  // // get events
+  // console.log('******************** SCRAPING EVENTS ********************')
+  // console.log(placeList[0])
+
+  // const path = `https://www.wwoz.org${placeList[0].path}`;
+  // const events = await scrapeForEvents(path);
+  // console.log(events);
 };
 
-executeThread();
+saveVenuesToDatabase();

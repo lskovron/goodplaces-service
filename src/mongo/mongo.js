@@ -12,7 +12,7 @@ const connectOptions = {
   socketTimeoutMS: 30000, // Close sockets after 30 seconds of inactivity
   useUnifiedTopology: true,
 }
-const defaultMongoUri = "mongodb://127.0.0.1:27017/"
+const defaultMongoUri = "mongodb://127.0.0.1:27017/wwoz_events"
 
 export const startMongo = async (uri = defaultMongoUri) => {
   try {

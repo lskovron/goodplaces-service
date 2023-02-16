@@ -7,7 +7,7 @@ export default `
     lat: String!
     lng: String!
     address: String!
-    googleId: String! 
+    path: String!
   }
 
   type Venue {
@@ -17,7 +17,6 @@ export default `
     lat: String!
     lng: String!
     address: String!
-    googleId: String!
     events: [Event!]!
   }
 
@@ -25,15 +24,22 @@ export default `
     id: ID!
     venue: Venue!
     date: String!
+    time: String!
     title: String!
   }
-
+  
   extend type Query {
     venues: [Venue!]!
-    venue(id: String!): Venue!
+    venue(input: String!): Venue!
   }
 
   extend type Mutation {
     createVenue(input: CreateVenueInput): Venue!
   }
 `
+
+
+// Most common queries:
+// 1. Find all events by Date
+// 2. Find all events by Venue
+// 3. Find all events by Artist (event title)

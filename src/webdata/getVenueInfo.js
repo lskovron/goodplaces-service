@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const key = "AIzaSyDfQ8wxkepJFIh5GfV1WOZ9ocBnKuvNVjE";
+const key = "###";
 export const getVenueInfo = async (venueName) => {
   const location = "29.9511,-90.0715";
   let place;
@@ -11,7 +11,6 @@ export const getVenueInfo = async (venueName) => {
     .then((res) => {
       const { data } = res;
       if (data?.results?.length) {
-        // console.log(data.results[0])
         const {
           name,
           formatted_address: address,
@@ -20,7 +19,6 @@ export const getVenueInfo = async (venueName) => {
           },
         } = data.results[0];
         place = {
-          venueName,
           lat,
           lng,
           address,
