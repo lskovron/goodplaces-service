@@ -4,8 +4,8 @@ export default `
 
   input CreateVenueInput {
     name: String!
-    lat: String!
-    lng: String!
+    lat: Float!
+    lng: Float!
     address: String!
     path: String!
   }
@@ -14,8 +14,8 @@ export default `
     id: ID!
     path: String!
     name: String!
-    lat: String!
-    lng: String!
+    lat: Float!
+    lng: Float!
     address: String!
     events: [Event!]!
   }

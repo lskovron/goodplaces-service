@@ -1,5 +1,5 @@
-import { createOrUpdateVenue } from "../mongo/utils.js";
 import { getVenueInfo } from "./getVenueInfo.js";
+import { saveVenue } from "./saveVenue.js";
 import { scrapeForVenues, scrapeForEvents } from "./scrapers.js";
 
 const saveVenuesToDatabase = async () => {
@@ -23,19 +23,17 @@ const saveVenuesToDatabase = async () => {
     })
   );
   
-  console.log('******************** UPDATED VENUES ********************')
-  await createOrUpdateVenue(placeList[0])
-
-  // console.log(placeList);
-  // let updatedVenues = [];
-  // await Promise.all(
-  //   placeList.map(
-  //     async (place) => {
-  //       const updatedPlace = await createOrUpdateVenue(place)
-  //       updatedVenues.push(updatedPlace);
-  //     }
-  //   )
-  // )
+  console.log('******************** UPDATE VENUES ********************')
+  console.log(placeList);
+  let updatedVenues = [];
+  await Promise.all(
+    placeList.map(
+      async (place) => {
+        const updatedPlace = await saveVenue(place)
+        updatedVenues.push(updatedPlace);
+      }
+    )
+  )
 
 
   console.log('******************** UPDATED VENUES ********************')
