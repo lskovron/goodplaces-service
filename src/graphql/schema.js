@@ -1,4 +1,6 @@
 export default `
+  scalar Date
+
   type Mutation
   type Query
 
@@ -7,12 +9,26 @@ export default `
     lat: Float!
     lng: Float!
     address: String!
-    path: String!
+    slug: String!
+  }
+
+  input CreateEventInput {
+    slug: String!
+    venueSlug: String!
+    date: Date!
+    time: String!
+    title: String!
+  }
+
+  input GetEventsInput {
+    venueSlug: String
+    date: Date
+    title: String
   }
 
   type Venue {
     id: ID!
-    path: String!
+    slug: String!
     name: String!
     lat: Float!
     lng: Float!
@@ -23,18 +39,22 @@ export default `
   type Event {
     id: ID!
     venue: Venue!
-    date: String!
+    date: Date!
     time: String!
     title: String!
+    slug: String!
   }
   
   extend type Query {
+    events(input: GetEventsInput): [Event!]!
+    event(slug: String!): Event!
     venues: [Venue!]!
-    venue(input: String!): Venue!
+    venue(slug: String!): Venue!
   }
 
   extend type Mutation {
     createVenue(input: CreateVenueInput): Venue!
+    createEvent(input: CreateEventInput): Event!
   }
 `
 

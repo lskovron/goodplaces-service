@@ -1,30 +1,41 @@
-import { getVenue, createOrUpdateVenue } from "../mongo/utils.js";
+import { getVenue, getAllVenues, createOrUpdateVenue, createOrUpdateEvent, getAllEvents, getEvent } from "../mongo/utils.js";
 
 export const resolvers = {
   Query: {
-    venues: async (_, __, context) => {
-    //   let reports = await getReports(context.user)
-    //   if (isFeatureEnabled({ tenantId: context.user.rrTenantId }, REPORTING_CANVAS_AUTHZ)) {
-    //     reports = await filterReportList(reports, context.user.id)
-    //   }
-    //   return reports.map(translateReportDocument)
+    venues: async () => {
+      return await getAllVenues();
+    },
+    events:  async (_, args) => {
+      const { input } = args;
+      return await getAllEvents(input);
     },
     venue: async (_, args) => {
-      const { input } = args;
-      return getVenue(input);
-      // return findVenue(args);
-    //   const results = await reportUtils.getReport(context.user, args.id)
-    //   return translateReportDocument(results)
+      const { slug } = args;
+      return await getVenue(slug);
     },
+    event: async (_, args) => {
+      const { slug } = args;
+      return await getEvent(slug);
+    }
   },
   Mutation: {
     createVenue: async (_, args) => {
-      console.log(args);
       const { input } = args;
-      return createOrUpdateVenue(input);
-    //   const newReport = args
-    //   const result = await reportUtils.createReport(context.user, newReport)
-    //   return translateReportDocument(result)
+      return await createOrUpdateVenue(input);
+    },
+    createEvent: async (_, args) => {
+      const { input } = args;
+      return await createOrUpdateEvent(input);
     },
   },
+  Event: {
+    venue: async (parent) => {
+      return await getVenue(parent.venueSlug)
+    }
+  },
+  Venue: {
+    events: async (parent) => {
+      // @TODO: finish this resolver
+    }
+  }
 }
