@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "npx nodemon",
-    "prettier": "prettier --write ."
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",

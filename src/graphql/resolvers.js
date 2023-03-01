@@ -1,11 +1,18 @@
-import { getVenue, getAllVenues, createOrUpdateVenue, createOrUpdateEvent, getAllEvents, getEvent } from "../mongo/utils.js";
+import {
+  getVenue,
+  getAllVenues,
+  createOrUpdateVenue,
+  createOrUpdateEvent,
+  getAllEvents,
+  getEvent,
+} from "../mongo/utils.js";
 
 export const resolvers = {
   Query: {
     venues: async () => {
       return await getAllVenues();
     },
-    events:  async (_, args) => {
+    events: async (_, args) => {
       const { input } = args;
       return await getAllEvents(input);
     },
@@ -16,7 +23,7 @@ export const resolvers = {
     event: async (_, args) => {
       const { slug } = args;
       return await getEvent(slug);
-    }
+    },
   },
   Mutation: {
     createVenue: async (_, args) => {
@@ -30,12 +37,13 @@ export const resolvers = {
   },
   Event: {
     venue: async (parent) => {
-      return await getVenue(parent.venueSlug)
-    }
+      return await getVenue(parent.venueSlug);
+    },
   },
   Venue: {
     events: async (parent) => {
       // @TODO: finish this resolver
-    }
-  }
-}
+      return await getAllEvents({ venueSlug: parent.slug });
+    },
+  },
+};

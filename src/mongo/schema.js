@@ -1,6 +1,5 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 const { Schema } = mongoose;
-
 
 export const venueSchema = new Schema({
   _id: String,
@@ -19,5 +18,5 @@ export const eventSchema = new Schema({
   slug: String,
   date: Date,
   time: String,
-  title: String
+  title: String,
 });

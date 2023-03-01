@@ -56,8 +56,7 @@ export default `
     createVenue(input: CreateVenueInput): Venue!
     createEvent(input: CreateEventInput): Event!
   }
-`
-
+`;
 
 // Most common queries:
 // 1. Find all events by Date
