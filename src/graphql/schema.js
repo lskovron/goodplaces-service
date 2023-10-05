@@ -44,17 +44,24 @@ export default `
     title: String!
     slug: String!
   }
+
+  type History {
+    id: ID!
+    dateString: String!,
+    date: Date!,
+    venuesError: Boolean!,
+    venuesScraped: Boolean!,
+    venuesScrapedDate: Date,
+    eventsError: Boolean!,
+    eventsScraped: Boolean!,
+    eventsScrapedDate: Date,
+  }
   
   extend type Query {
     events(input: GetEventsInput): [Event!]!
     event(slug: String!): Event!
     venues: [Venue!]!
     venue(slug: String!): Venue!
-  }
-
-  extend type Mutation {
-    createVenue(input: CreateVenueInput): Venue!
-    createEvent(input: CreateEventInput): Event!
   }
 `;
 

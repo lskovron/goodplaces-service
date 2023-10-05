@@ -8,7 +8,6 @@ export const venueSchema = new Schema({
   lat: Number,
   lng: Number,
   address: String,
-  events: [String],
   googleId: String,
 });
 
@@ -19,4 +18,16 @@ export const eventSchema = new Schema({
   date: Date,
   time: String,
   title: String,
+});
+
+export const historySchema = new Schema({
+  _id: String,
+  dateString: String,
+  date: Date,
+  venueErrors: [String],
+  venuesScraped: Boolean,
+  venuesScrapedDate: Date,
+  eventErrors: [String],
+  eventsScraped: Boolean,
+  eventsScrapedDate: Date,
 });

@@ -12,8 +12,10 @@ export const scrapeForVenues = async (url) => {
     }))
   );
 
+  const error = linkTexts.length === 0 ? { msg: `No venues found at URL ${url}` } : null;
+
   browser.close();
-  return linkTexts;
+  return [linkTexts, error];
 };
 
 export const scrapeForEvents = async (url) => {
@@ -32,8 +34,10 @@ export const scrapeForEvents = async (url) => {
     }))
   );
 
+  const error = linkTexts.length === 0 ? { msg: `No events found at URL ${url}` } : null;
+
   browser.close();
-  return linkTexts;
+  return [linkTexts, error];
   // @TODO: get venue data with events
 };
 

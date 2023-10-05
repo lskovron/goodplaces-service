@@ -18,7 +18,7 @@ export const startMongo = async (uri = defaultMongoUri) => {
   try {
     await mongoose.connect(uri, connectOptions);
   } catch (err) {
-    logger.error(`mongoose error: ${err}`);
+    console.error(`mongoose error: ${err}`);
     mongoose.disconnect();
   }
 };

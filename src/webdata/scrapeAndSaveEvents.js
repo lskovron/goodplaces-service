@@ -1,16 +1,21 @@
-import { getVenueInfo } from "./utils/placesApi.js";
-import { scrapeForEvents, scrapeForVenues } from "./utils/puppeteer.js";
-import { getAllVenues, saveEvent, saveVenue } from "./utils/mongo.js";
+import { scrapeForEvents } from "./utils/puppeteer.js";
 import { getTime } from "./utils/parsers.js";
+import { createOrUpdateEvent, createOrUpdateHistory } from "../mongo/utils.js";
 
 const scrapeAndSaveEvents = async (date) => {
   if (!date) return;
   // @TODO: validate date format
 
   console.log("Scraping events..........");
-  const todaysEvents = await scrapeForEvents(
+  const [todaysEvents, error] = await scrapeForEvents(
     `https://www.wwoz.org/calendar/livewire-music?date=${date}`
   );
+
+  if( error ) {
+    console.error(error.msg)
+    return;
+  }
+  
   console.log(`${todaysEvents.length} events scraped for date ${date}`);
 
   let parsedEvents = todaysEvents.map((ev) => ({
@@ -26,7 +31,7 @@ const scrapeAndSaveEvents = async (date) => {
   console.log("Saving new events..........");
   await Promise.all(
     parsedEvents.map(async (ev) => {
-      await saveEvent(ev)
+      await createOrUpdateEvent(ev)
         .then(() => {
           console.log(`New event saved: ${ev.slug}`);
         })
@@ -36,18 +41,16 @@ const scrapeAndSaveEvents = async (date) => {
     })
   );
   //@TODO: catch any failed promise and early return
+
+  // @TODO: abstract the history function?
+  const history = {
+    dateString: date,
+    eventErrors: [],
+    eventsScraped: true,
+    eventsScrapedDate: new Date(),
+  }
+  await createOrUpdateHistory(history)
 };
 
-// console.log('******************** UPDATED VENUES ********************')
-// console.log(updatedVenues)
-
-// // get events
-// console.log('******************** SCRAPING EVENTS ********************')
-// console.log(placeList[0])
-
-// const slug = `https://www.wwoz.org${placeList[0].slug}`;
-// const events = await scrapeForEvents(slug);
-// console.log(events);
-scrapeAndSaveEvents("2023-02-10");
 
 export default scrapeAndSaveEvents;
