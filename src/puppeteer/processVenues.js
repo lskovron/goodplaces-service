@@ -1,30 +1,16 @@
-import { getVenueInfo } from "./utils/placesApi.js";
-import { scrapeForVenues } from "./utils/puppeteer.js";
-// import { getAllVenues, saveVenue } from "./utils/mongo.js";
-import { createOrUpdateHistory, createOrUpdateVenue, getAllVenueSlugs } from "../mongo/utils.js";
+import { createOrUpdateVenue, getAllVenueSlugs } from "../mongo/utils";
+import { parseVenue } from "./utils/parsers";
 
-const scrapeAndSaveVenues = async (date) => {
-  if (!date) return;
-  // @TODO: validate date format
-
-  console.log("Scraping venues..........");
-  const [todaysVenues, error] = await scrapeForVenues(
-    `https://www.wwoz.org/calendar/livewire-music?date=${date}`
-  );
-
-  if( error ) {
-    console.error(error.msg)
-    return;
-  }
-
-  console.log(`${todaysVenues.length} venues scraped for date ${date}`);
+const processVenues = async (venues, dateString) => {
+  console.log("Saving new venues..........");
+  console.log(`${venues.length} venues scraped for date ${dateString}`);
 
   console.log("Checking for new venues..........");
   let errors = [];
   const existingVenues = await getAllVenueSlugs();
-  const newVenues = todaysVenues.filter(
+  const newVenues = venues.filter(
     ({ slug }) => existingVenues.indexOf(slug) === -1
-  );
+  ).map(parseVenue);
 
   if (newVenues.length > 0) {
     console.log(`${newVenues.length} new venue(s) detected`);
@@ -55,9 +41,6 @@ const scrapeAndSaveVenues = async (date) => {
       })
     );
 
-    const errorTest = ["test-venue-slug","hello-world","pikachu","123-venue"]
-    errors.push(...errorTest)
-
     console.log("Saving new venues..........");
     await Promise.all(
       placeList.map(async (place) => {
@@ -74,15 +57,6 @@ const scrapeAndSaveVenues = async (date) => {
   } else {
     console.log(`No new venues found`);
   }
+}
 
-  // @TODO: abstract the history function?
-  const history = {
-    dateString: date,
-    venuesScraped: true,
-    venuesScrapedDate: new Date(),
-  }
-  if( errors.length ) history.venueErrors = errors;
-  await createOrUpdateHistory(history)
-};
-
-export default scrapeAndSaveVenues;
+export default processVenues;

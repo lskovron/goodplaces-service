@@ -33,7 +33,6 @@ export const getEvent = async (slug) => {
 export const createOrUpdateVenue = async (venueData) => {
   const { address, lat, lng, slug, name } = venueData;
   const Venue = mongoose.model("Venue", venueSchema);
-  console.log(Venue);
   await Venue.updateOne(
     { slug },
     { $set: { address, lat, lng, name } },
@@ -43,13 +42,12 @@ export const createOrUpdateVenue = async (venueData) => {
   return updatedVenue;
 };
 
-export const createOrUpdateEvent = async (eventData) => {
-  const { slug, date: dateString, venueSlug, time, title } = eventData;
-  const date = new Date(dateString);
+export const createOrUpdateEvent = async (parsedEvent) => {
+  const { slug, dateString, venueSlug, time, title, date } = parsedEvent;
   const Event = mongoose.model("Event", eventSchema);
   await Event.updateOne(
     { slug },
-    { $set: { venueSlug, time, date, title } },
+    { $set: { venueSlug, time, dateString, title, date } },
     { upsert: true }
   );
   return getEvent(slug);

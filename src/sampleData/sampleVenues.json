@@ -1,0 +1,310 @@
+[
+    {
+      "name": "21st Amendment",
+      "slug": "21st-amendment"
+    },
+    {
+      "name": "30/90",
+      "slug": "30-90"
+    },
+    {
+      "name": "Apple Barrel",
+      "slug": "apple-barrel"
+    },
+    {
+      "name": "Bacchanal (OUTDOORS)",
+      "slug": "bacchanal-outdoors"
+    },
+    {
+      "name": "Bamboula's",
+      "slug": "bamboulas"
+    },
+    {
+      "name": "Bayou Bar at the Pontchartrain",
+      "slug": "bayou-bar-pontchartrain"
+    },
+    {
+      "name": "BJ's Lounge",
+      "slug": "bjs-lounge"
+    },
+    {
+      "name": "Blue Nile",
+      "slug": "blue-nile"
+    },
+    {
+      "name": "Blue Nile - Balcony Room",
+      "slug": "blue-nile-balcony-room"
+    },
+    {
+      "name": "BMC",
+      "slug": "bmc"
+    },
+    {
+      "name": "Bratz Y'all",
+      "slug": "bratz-yall"
+    },
+    {
+      "name": "Buffa's",
+      "slug": "buffas"
+    },
+    {
+      "name": "Bullet's Sports Bar",
+      "slug": "bullets-sports-bar"
+    },
+    {
+      "name": "Café Negril",
+      "slug": "cafe-negril"
+    },
+    {
+      "name": "Canopy by Hilton New Orleans Downtown",
+      "slug": "canopy-hilton-new-orleans-downtown"
+    },
+    {
+      "name": "Carousel Lounge - Hotel Monteleone",
+      "slug": "carousel-lounge-hotel-monteleone"
+    },
+    {
+      "name": "Carrollton Station",
+      "slug": "carrollton-station"
+    },
+    {
+      "name": "Chickie Wah Wah",
+      "slug": "chickie-wah-wah"
+    },
+    {
+      "name": "Civic Theatre",
+      "slug": "civic-theatre"
+    },
+    {
+      "name": "Commons Club at Virgin Hotels New Orleans",
+      "slug": "commons-club-virgin-hotels-new-orleans"
+    },
+    {
+      "name": "Crescent City Brewhouse",
+      "slug": "crescent-city-brewhouse"
+    },
+    {
+      "name": "d.b.a.",
+      "slug": "dba"
+    },
+    {
+      "name": "Davenport Lounge at the Ritz-Carlton",
+      "slug": "davenport-lounge-ritz-carlton"
+    },
+    {
+      "name": "Dos Jefes",
+      "slug": "dos-jefes"
+    },
+    {
+      "name": "El Cucuy",
+      "slug": "el-cucuy"
+    },
+    {
+      "name": "Fourth Wall",
+      "slug": "fourth-wall"
+    },
+    {
+      "name": "French Market (OUTDOORS)",
+      "slug": "french-market-outdoors"
+    },
+    {
+      "name": "Fritzel's Jazz Club",
+      "slug": "fritzels-jazz-club"
+    },
+    {
+      "name": "Garage Music Club, The",
+      "slug": "garage-music-club"
+    },
+    {
+      "name": "Gasa Gasa",
+      "slug": "gasa-gasa"
+    },
+    {
+      "name": "Goat, The",
+      "slug": "goat"
+    },
+    {
+      "name": "House of Blues",
+      "slug": "house-blues"
+    },
+    {
+      "name": "House of Blues - Foundation Room",
+      "slug": "house-blues-foundation-room"
+    },
+    {
+      "name": "House of Blues - Voodoo Garden (OUTDOORS)",
+      "slug": "house-blues-voodoo-garden-outdoors"
+    },
+    {
+      "name": "Irene's",
+      "slug": "irenes"
+    },
+    {
+      "name": "Jazz Playhouse",
+      "slug": "jazz-playhouse"
+    },
+    {
+      "name": "Kerry Irish Pub",
+      "slug": "kerry-irish-pub"
+    },
+    {
+      "name": "Le Bon Temps Roulé",
+      "slug": "le-bon-temps-roule"
+    },
+    {
+      "name": "Link Nola",
+      "slug": "link-nola"
+    },
+    {
+      "name": "Madame Vic's",
+      "slug": "madame-vics"
+    },
+    {
+      "name": "Mahogany Jazz Hall",
+      "slug": "mahogany-jazz-hall"
+    },
+    {
+      "name": "Maison, The",
+      "slug": "maison"
+    },
+    {
+      "name": "Maison Bourbon Jazz Club",
+      "slug": "maison-bourbon-jazz-club"
+    },
+    {
+      "name": "Maison Dupuy",
+      "slug": "maison-dupuy"
+    },
+    {
+      "name": "Maple Leaf",
+      "slug": "maple-leaf"
+    },
+    {
+      "name": "May Baily's Place",
+      "slug": "may-bailys-place"
+    },
+    {
+      "name": "Mid-City Lanes Rock 'n' Bowl",
+      "slug": "mid-city-lanes-rock-n-bowl"
+    },
+    {
+      "name": "MRB",
+      "slug": "mrb"
+    },
+    {
+      "name": "Music Box Village (OUTDOORS)",
+      "slug": "music-box-village-outdoors"
+    },
+    {
+      "name": "Neutral Ground Coffeehouse in Exile",
+      "slug": "neutral-ground-coffeehouse-exile"
+    },
+    {
+      "name": "New Orleans Jazz Museum",
+      "slug": "new-orleans-jazz-museum"
+    },
+    {
+      "name": "New Orleans Jazz National Historic Park",
+      "slug": "new-orleans-jazz-national-historic-park"
+    },
+    {
+      "name": "NOLA Brewing",
+      "slug": "nola-brewing"
+    },
+    {
+      "name": "NOPSI Hotel",
+      "slug": "nopsi-hotel"
+    },
+    {
+      "name": "Old Point Bar",
+      "slug": "old-point-bar"
+    },
+    {
+      "name": "Palm Court Jazz Cafe",
+      "slug": "palm-court-jazz-cafe"
+    },
+    {
+      "name": "Polo Club Lounge at Windsor Court Hotel",
+      "slug": "polo-club-lounge-windsor-court-hotel"
+    },
+    {
+      "name": "Pour House at District",
+      "slug": "pour-house-district"
+    },
+    {
+      "name": "Pour House at Jefferson",
+      "slug": "pour-house-jefferson"
+    },
+    {
+      "name": "Preservation Hall",
+      "slug": "preservation-hall"
+    },
+    {
+      "name": "Rabbit Hole, The",
+      "slug": "rabbit-hole"
+    },
+    {
+      "name": "Republic New Orleans",
+      "slug": "republic-new-orleans"
+    },
+    {
+      "name": "Roosevelt Hotel - Fountain Lounge",
+      "slug": "roosevelt-hotel-fountain-lounge"
+    },
+    {
+      "name": "Santos Bar",
+      "slug": "santos-bar"
+    },
+    {
+      "name": "Santos Bar - Upstairs",
+      "slug": "santos-bar-upstairs"
+    },
+    {
+      "name": "Saturn Bar",
+      "slug": "saturn-bar"
+    },
+    {
+      "name": "Siberia",
+      "slug": "siberia"
+    },
+    {
+      "name": "Sidney's Saloon",
+      "slug": "sidneys-saloon"
+    },
+    {
+      "name": "Snug Harbor",
+      "slug": "snug-harbor"
+    },
+    {
+      "name": "Spotted Cat",
+      "slug": "spotted-cat"
+    },
+    {
+      "name": "Three Keys - Ace Hotel",
+      "slug": "three-keys-ace-hotel"
+    },
+    {
+      "name": "Three Muses",
+      "slug": "three-muses"
+    },
+    {
+      "name": "Tipitina's",
+      "slug": "tipitinas"
+    },
+    {
+      "name": "Toulouse Theatre",
+      "slug": "toulouse-theatre-0"
+    },
+    {
+      "name": "Vintage Voyage",
+      "slug": "vintage-voyage"
+    },
+    {
+      "name": "Woodie's Grill & Bar",
+      "slug": "woodies-grill-bar"
+    },
+    {
+      "name": "Zony Mash Beer Project",
+      "slug": "zony-mash-beer-project"
+    }
+  ]

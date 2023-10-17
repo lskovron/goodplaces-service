@@ -15,6 +15,7 @@ export const eventSchema = new Schema({
   _id: String,
   venueSlug: String,
   slug: String,
+  dateString: String,
   date: Date,
   time: String,
   title: String,

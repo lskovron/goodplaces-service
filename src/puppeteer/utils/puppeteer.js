@@ -1,47 +1,55 @@
 import puppeteer from "puppeteer";
 
-export const scrapeForVenues = async (url) => {
+
+export const scrapeDate = async (url) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(url);
 
-  const linkTexts = await page.$$eval("h3.panel-title a", (elements) =>
-    elements.map((item) => ({
-      name: item.textContent.trim(),
-      slug: item.getAttribute("href").replace("/organizations/", ""),
-    }))
-  );
+  const data = await page.$$eval(".livewire-listing .panel-default", (elements) => {
+    let venues = [], events = [];
+    elements.map((item) => {
+      // add venue data to 'venues' array
+      const venueHtml = item.querySelector(".panel-title a");
+      const venueSlug = venueHtml.getAttribute("href").replace("/organizations/", "");
+      const venue = {
+        name: venueHtml.textContent.trim(),
+        slug: venueSlug
+      }
+      venues.push(venue);
 
-  const error = linkTexts.length === 0 ? { msg: `No venues found at URL ${url}` } : null;
+      // loop events and add to 'events' array
+      const eventList = [...item.querySelectorAll('.calendar-info')];
+      eventList.map(ev => {
+        events.push({
+          venueSlug,
+          title: ev.querySelector(".truncate a").textContent.trim(),
+          timeString: ev.querySelector("p:not(.truncate)").textContent.trim(),
+          slug: ev
+            .querySelector(".truncate a")
+            .getAttribute("href")
+            .replace("/events/", ""),
+        })
+      })
+    })
+    return {
+      venues,
+      events
+    }
+  });
+
+  const missingVenues = data.venues.length === 0;
+  const missingEvents = data.events.length === 0;
+  const missingData = [
+    ...(missingVenues ? ['venues'] : []),
+    ...(missingEvents ? ['events'] : []),
+  ];
+  const error = missingData.length > 0 ? { msg: `No ${missingData.join(', ')} found at URL ${url}` } : 'no error!';
 
   browser.close();
-  return [linkTexts, error];
+  return [data, error];
 };
 
-export const scrapeForEvents = async (url) => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto(url);
 
-  const linkTexts = await page.$$eval(".calendar-info", (elements) =>
-    elements.map((item) => ({
-      name: item.querySelector(".truncate a").textContent.trim(),
-      date: item.querySelector("p:not(.truncate)").textContent.trim(),
-      id: item
-        .querySelector(".truncate a")
-        .getAttribute("href")
-        .replace("/events/", ""),
-    }))
-  );
-
-  const error = linkTexts.length === 0 ? { msg: `No events found at URL ${url}` } : null;
-
-  browser.close();
-  return [linkTexts, error];
-  // @TODO: get venue data with events
-};
-
-// scrapeForVenues("https://www.wwoz.org/calendar/livewire-music?date=2023-02-10");
-// scrapeForEvents("https://www.wwoz.org/organizations/21st-amendment");
-// const events = await scrapeForEvents("https://www.wwoz.org/calendar/livewire-music?date=2023-02-10");
-// console.log(events);
+// const [{ venues, events },error] = await scrapeDate("https://www.wwoz.org/calendar/livewire-music?date=2023-02-10");
+// console.log(JSON.stringify(venues), JSON.stringify(events), error)
