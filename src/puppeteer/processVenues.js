@@ -1,12 +1,12 @@
-import { createOrUpdateVenue, getAllVenueSlugs } from "../mongo/utils";
-import { parseVenue } from "./utils/parsers";
+import { createOrUpdateVenue, getAllVenueSlugs } from "../mongo/utils.js";
+import { parseVenue } from "./utils/parsers.js";
 
 const processVenues = async (venues, dateString) => {
   console.log("Saving new venues..........");
   console.log(`${venues.length} venues scraped for date ${dateString}`);
 
   console.log("Checking for new venues..........");
-  let errors = [];
+  let venueErrors = [];
   const existingVenues = await getAllVenueSlugs();
   const newVenues = venues.filter(
     ({ slug }) => existingVenues.indexOf(slug) === -1
@@ -18,12 +18,7 @@ const processVenues = async (venues, dateString) => {
     await Promise.all(
       newVenues.map(async (venue) => {
         console.log(`Getting place data for new venue: ${venue.slug}`);
-        placeList.push({
-          lat: 29.9511,
-          lng: -90.0715,
-          address: "123 Canal St",
-          ...venue,
-        })
+        placeList.push(venue)
         // @TODO: implement google places integration
         // @TODO: decide what to do google API errors
         // await getVenueInfo(venue.name).then((res) => {
@@ -49,6 +44,7 @@ const processVenues = async (venues, dateString) => {
             console.log(`New venue saved: ${place.slug}`);
           })
           .catch((e) => {
+            venueErrors.push(place.slug);
             console.error(`Failed to save new venue: ${place.slug} - ${e}`);
           });
       })
@@ -57,6 +53,7 @@ const processVenues = async (venues, dateString) => {
   } else {
     console.log(`No new venues found`);
   }
+  return venueErrors;
 }
 
 export default processVenues;

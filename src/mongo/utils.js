@@ -54,12 +54,12 @@ export const createOrUpdateEvent = async (parsedEvent) => {
 };
 
 export const createOrUpdateHistory = async (historyData) => {
-  const { dateString, ...props } = historyData;
+  const { dateString, hasError, venueErrors, eventErrors } = historyData;
   const date = new Date(dateString);
   const History = mongoose.model("History", historySchema);
   return await History.updateOne(
     { dateString },
-    { $set: { ...props, date } },
+    { $set: { hasError, venueErrors, eventErrors, date, dateString } },
     { upsert: true }
   );
 }

@@ -30,9 +30,9 @@ export default `
     id: ID!
     slug: String!
     name: String!
-    lat: Float!
-    lng: Float!
-    address: String!
+    lat: Float
+    lng: Float
+    address: String
     events: [Event!]!
   }
 
@@ -49,12 +49,9 @@ export default `
     id: ID!
     dateString: String!,
     date: Date!,
-    venuesError: Boolean!,
-    venuesScraped: Boolean!,
-    venuesScrapedDate: Date,
-    eventsError: Boolean!,
-    eventsScraped: Boolean!,
-    eventsScrapedDate: Date,
+    hasError: Boolean!,
+    venueErrors: [String],
+    eventErrors: [String],
   }
   
   extend type Query {

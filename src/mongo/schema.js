@@ -25,10 +25,7 @@ export const historySchema = new Schema({
   _id: String,
   dateString: String,
   date: Date,
+  hasError: Boolean,
   venueErrors: [String],
-  venuesScraped: Boolean,
-  venuesScrapedDate: Date,
   eventErrors: [String],
-  eventsScraped: Boolean,
-  eventsScrapedDate: Date,
 });

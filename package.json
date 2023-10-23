@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "npx nodemon",
+    "scrape-date": "node ./src/scripts/scrapeDate.js",
     "format": "prettier --write ."
   },
   "keywords": [],

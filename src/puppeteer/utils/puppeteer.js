@@ -44,7 +44,7 @@ export const scrapeDate = async (url) => {
     ...(missingVenues ? ['venues'] : []),
     ...(missingEvents ? ['events'] : []),
   ];
-  const error = missingData.length > 0 ? { msg: `No ${missingData.join(', ')} found at URL ${url}` } : 'no error!';
+  const error = missingData.length > 0 ? { msg: `No ${missingData.join(', ')} found at URL ${url}` } : null;
 
   browser.close();
   return [data, error];
