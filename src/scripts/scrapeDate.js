@@ -23,6 +23,8 @@ if( DATE_RANGE_START && DATE_RANGE_END ) {
     // function will throw an error and abandon the process if date is invalid
     await validateDateString(DATE);
     await handleDate(DATE);
+} else {
+    console.log('Must have DATE or DATE_RANGE variables set')
 }
 
 mongoose.connection.close()

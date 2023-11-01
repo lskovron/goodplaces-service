@@ -7,7 +7,7 @@ const handleDate = async (dateString) => {
   if (!dateString) return;
   // @TODO: validate date format
 
-  console.log("Scraping events..........");
+  console.log(`Scraping data for ${dateString}..........`);
   const [{ events, venues }, error] = await scrapeDate(
     `https://www.wwoz.org/calendar/livewire-music?date=${dateString}`
   );

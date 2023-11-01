@@ -14,7 +14,6 @@ export const timeTo24 = (timeString) => {
 export const parseEvent = async ({timeString, slug, title: rawTitle, venueSlug}, dateString) => {
     let time = getTime(timeString);
     time = timeTo24(time);
-    console.log(`${dateString} ${time} GMT-0600`); // @TODO: consider daylight savings?
     const date = await new Date(`${dateString} ${time} GMT-0600`);
     let title = sanitizeString(rawTitle)
 
@@ -51,8 +50,8 @@ export const validateDateRange = (date1, date2) => {
     const startDate = diff > 0 ? date1 : date2;
     const lengthInDays = Math.abs(diff);
 
-    if ( lengthInDays > 30 ){
-        throw new Error(`Date range ${date1} to ${date2} exceeds maximum range of 30 days`);
+    if ( lengthInDays > 90 ){
+        throw new Error(`Date range ${date1} to ${date2} exceeds maximum range of 90 days`);
     }
 
     for ( let i=0; i <= lengthInDays; i++){

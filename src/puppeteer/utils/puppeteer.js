@@ -38,18 +38,12 @@ export const scrapeDate = async (url) => {
     }
   });
 
-  const missingVenues = data.venues.length === 0;
-  const missingEvents = data.events.length === 0;
   const missingData = [
-    ...(missingVenues ? ['venues'] : []),
-    ...(missingEvents ? ['events'] : []),
+    ...(data.venues.length === 0 ? ['venues'] : []),
+    ...(data.events.length === 0 ? ['events'] : []),
   ];
   const error = missingData.length > 0 ? { msg: `No ${missingData.join(', ')} found at URL ${url}` } : null;
 
   browser.close();
   return [data, error];
 };
-
-
-// const [{ venues, events },error] = await scrapeDate("https://www.wwoz.org/calendar/livewire-music?date=2023-02-10");
-// console.log(JSON.stringify(venues), JSON.stringify(events), error)
