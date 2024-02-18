@@ -1,18 +1,20 @@
 import axios from "axios";
+import { config } from "dotenv";
 
-const key = "###";
+config({path: '.env'})
+const { GOOGLE_API_KEY } = process.env;
+
 export const getVenueInfo = async (venueName) => {
-  const location = "29.9511,-90.0715";
+  const location = "29.9511,-90.0715"; // New Orleans
   let place;
   await axios
     .get(
-      `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${venueName}&location=${location}&radius=5000&key=${key}`
+      `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${venueName}&location=${location}&radius=5000&key=${GOOGLE_API_KEY}`
     )
     .then((res) => {
       const { data } = res;
       if (data?.results?.length) {
         const {
-          name,
           formatted_address: address,
           geometry: {
             location: { lat, lng },
@@ -22,7 +24,6 @@ export const getVenueInfo = async (venueName) => {
           lat,
           lng,
           address,
-          name,
         };
       } else {
         console.error(`${venueName} not found`);

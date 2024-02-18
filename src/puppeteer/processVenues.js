@@ -19,20 +19,6 @@ const processVenues = async (venues, dateString) => {
       newVenues.map(async (venue) => {
         console.log(`Getting place data for new venue: ${venue.slug}`);
         placeList.push(venue)
-        // @TODO: implement google places integration
-        // @TODO: decide what to do google API errors
-        // await getVenueInfo(venue.name).then((res) => {
-        //   placeList.push({
-        //     ...res,
-        //     ...venue,
-        //   });
-        // }).catch((e) => {
-        //   placeErrors.push({
-        //     ...venue,
-        //     error: e
-        //   })
-        //   console.error(`Error getting place data for ${place.slug}`)
-        // });
       })
     );
 

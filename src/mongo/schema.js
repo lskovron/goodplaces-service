@@ -9,6 +9,8 @@ export const venueSchema = new Schema({
   lng: Number,
   address: String,
   googleId: String,
+  dateScraped: Date,
+  hasError: Boolean,
 });
 
 export const eventSchema = new Schema({

@@ -1,14 +1,14 @@
 import mongoose from "mongoose";
 import { config } from "dotenv";
-import { getOffsetDate, validateDateRange, validateDateString } from "../puppeteer/utils/parsers.js";
+import { validateDateRange, validateDateString } from "../puppeteer/utils/parsers.js";
 import { startMongo } from "../mongo/mongo.js";
 import handleDate from "../puppeteer/handleDate.js";
 
 
 config({path: '.env'})
-const { DATE_RANGE_START, DATE_RANGE_END, DATE} = process.env;
+const { DATE_RANGE_START, DATE_RANGE_END, DATE, MONGO_URI } = process.env;
 
-await startMongo()
+await startMongo(MONGO_URI);
 
 if( DATE_RANGE_START && DATE_RANGE_END ) {
     // function will throw an error and abandon the process if dates are invalid

@@ -17,6 +17,12 @@ export const getAllVenueSlugs = async () => {
   return await Venue.distinct("slug", {});
 };
 
+export const getIncompleteVenueSlugs = async () => {
+  const Venue = mongoose.model("Venue", venueSchema);
+  // returns an array of slugs
+  return await Venue.find({ "dateScraped" : { "$exists" : false } });
+};
+
 export const getAllEvents = async (input) => {
   const { title, date: dateString, venueSlug } = input;
   const date = new Date(dateString);
@@ -31,11 +37,24 @@ export const getEvent = async (slug) => {
 };
 
 export const createOrUpdateVenue = async (venueData) => {
-  const { address, lat, lng, slug, name } = venueData;
+  const { slug, name } = venueData;
   const Venue = mongoose.model("Venue", venueSchema);
   await Venue.updateOne(
     { slug },
-    { $set: { address, lat, lng, name } },
+    { $set: { name } },
+    { upsert: true }
+  );
+  const updatedVenue = await getVenue(slug);
+  return updatedVenue;
+};
+
+export const updateVenueData = async (venueData) => {
+  const { address, lat, lng, slug, hasError } = venueData;
+  const dateScraped = new Date();
+  const Venue = mongoose.model("Venue", venueSchema);
+  await Venue.updateOne(
+    { slug },
+    { $set: { address, lat, lng, hasError, dateScraped } },
     { upsert: true }
   );
   const updatedVenue = await getVenue(slug);
