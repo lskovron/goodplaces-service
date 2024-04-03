@@ -72,6 +72,29 @@ export const createOrUpdateEvent = async (parsedEvent) => {
   return getEvent(slug);
 };
 
+export const getEarliestHistory = async () => {
+  const History = mongoose.model("History", historySchema);
+  return await History.find().sort({ "date" : 1 }).limit(1)
+}
+
+export const getMostRecentHistory = async () => {
+  const History = mongoose.model("History", historySchema);
+  return await History.find().sort({ "date" : -1 }).limit(1)
+}
+
+export const getHistory = async (dateString) => {
+  const date = new Date(dateString);
+  const History = mongoose.model("History", historySchema);
+  return await History.findOne({ date });
+}
+
+export const getHistories = async ({ start, end }) => {
+  const startDate = new Date(start)
+  const endDate = new Date(end)
+  const History = mongoose.model("History", historySchema);
+  return await History.find({ date: { $gte: startDate, $lte: endDate }});
+}
+
 export const createOrUpdateHistory = async (historyData) => {
   const { dateString, hasError, venueErrors, eventErrors } = historyData;
   const date = new Date(dateString);

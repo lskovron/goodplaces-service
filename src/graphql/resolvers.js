@@ -1,14 +1,19 @@
 import {
   getVenue,
   getAllVenues,
-  createOrUpdateVenue,
-  createOrUpdateEvent,
   getAllEvents,
   getEvent,
+  getHistory,
+  getHistories,
+  getEarliestHistory,
+  getMostRecentHistory
 } from "../mongo/utils.js";
 
 export const resolvers = {
   Query: {
+    history: async () => {
+      return await getAllVenues();
+    },
     venues: async () => {
       return await getAllVenues();
     },
@@ -24,16 +29,19 @@ export const resolvers = {
       const { slug } = args;
       return await getEvent(slug);
     },
-  },
-  Mutation: {
-    createVenue: async (_, args) => {
-      const { input } = args;
-      return await createOrUpdateVenue(input);
+    date: async (_, args) => {
+      const { dateString } = args;
+      return await getHistory(dateString);
     },
-    createEvent: async (_, args) => {
-      const { input } = args;
-      return await createOrUpdateEvent(input);
+    history: async (_, args) => {
+      const { dateRange } = args;
+      return await getHistories(dateRange);
     },
+    fullHistory: async () => {
+      const earliest = await getEarliestHistory()
+      const mostRecent = await getMostRecentHistory()
+      return await getHistories({ start: earliest[0].dateString, end: mostRecent[0].dateString});
+    }
   },
   Event: {
     venue: async (parent) => {

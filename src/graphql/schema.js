@@ -1,23 +1,11 @@
 export default `
   scalar Date
 
-  type Mutation
   type Query
 
-  input CreateVenueInput {
-    name: String!
-    lat: Float!
-    lng: Float!
-    address: String!
-    slug: String!
-  }
-
-  input CreateEventInput {
-    slug: String!
-    venueSlug: String!
-    date: Date!
-    time: String!
-    title: String!
+  input DateRangeInput {
+    start: String!
+    end: String!
   }
 
   input GetEventsInput {
@@ -59,6 +47,9 @@ export default `
     event(slug: String!): Event!
     venues: [Venue!]!
     venue(slug: String!): Venue!
+    history(dateRange: DateRangeInput!): [History!]!
+    fullHistory: [History]!
+    date(dateString: String!): History!
   }
 `;
 
