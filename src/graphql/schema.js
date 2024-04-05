@@ -14,6 +14,11 @@ export default `
     title: String
   }
 
+  type Count {
+    name: String
+    count: Int
+  }
+
   type Venue {
     id: ID!
     slug: String!
@@ -44,6 +49,7 @@ export default `
   
   extend type Query {
     events(input: GetEventsInput): [Event!]!
+    eventsByVenue(dateRange: DateRangeInput): [Count!]!
     event(slug: String!): Event!
     venues: [Venue!]!
     venue(slug: String!): Venue!

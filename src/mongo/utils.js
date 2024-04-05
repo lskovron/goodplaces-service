@@ -105,3 +105,29 @@ export const createOrUpdateHistory = async (historyData) => {
     { upsert: true }
   );
 }
+export const getEventsByVenue = async ({ start, end }) => {
+  const startDate = new Date(start)
+  const endDate = new Date(end)
+  const Venue = mongoose.model("Venue", venueSchema);
+  const res = await Venue.aggregate([
+    {
+      $lookup : {
+          from : "events",
+          localField : "slug",
+          foreignField : "venueSlug",
+          as : "events",
+          pipeline: [
+            {"$match" : { date: { $gte: startDate, $lte: endDate }}}
+          ]
+      }
+    },
+    {
+      $project : {
+          name : "$name",
+          count : {$size : "$events"}
+      }
+    }
+  ])
+  console.log(res)
+  return res;
+}

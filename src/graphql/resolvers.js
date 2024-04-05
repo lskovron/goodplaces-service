@@ -6,7 +6,8 @@ import {
   getHistory,
   getHistories,
   getEarliestHistory,
-  getMostRecentHistory
+  getMostRecentHistory,
+  getEventsByVenue
 } from "../mongo/utils.js";
 
 export const resolvers = {
@@ -16,6 +17,10 @@ export const resolvers = {
     },
     venues: async () => {
       return await getAllVenues();
+    },
+    eventsByVenue: async (_, args) => {
+      const { dateRange } = args;
+      return await getEventsByVenue(dateRange);
     },
     events: async (_, args) => {
       const { input } = args;

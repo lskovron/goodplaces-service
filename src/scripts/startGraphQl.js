@@ -5,8 +5,6 @@ import { resolvers } from "../graphql/resolvers.js";
 import typeDefs from "../graphql/schema.js";
 import { startMongo } from "../mongo/mongo.js";
 
-console.log('hello')
-
 config({path: '.env'})
 const { MONGO_URI } = process.env;
 
