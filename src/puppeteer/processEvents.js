@@ -8,7 +8,7 @@ const processEvents = async (events, dateString) => {
     events.map(async (event) => await parseEvent(event, dateString))
   );
 
-  console.log("Saving new events..........");
+  console.log('Saving new events..........');
   await Promise.all(
     parsedEvents.map(async (ev) => {
       await createOrUpdateEvent(ev)
@@ -18,12 +18,12 @@ const processEvents = async (events, dateString) => {
         .catch((e) => {
           eventErrors.push(ev.slug);
           console.error(`Failed to save new event: ${ev.slug} - ${e}`);
-          new Error(`Failed to save new event: ${ev.slug} - ${e}`)
+          new Error(`Failed to save new event: ${ev.slug} - ${e}`);
         });
     })
   );
 
   return eventErrors;
-}
+};
 
 export default processEvents;

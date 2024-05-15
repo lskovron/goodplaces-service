@@ -1,8 +1,8 @@
-import { getVenueInfo } from "./utils/placesApi.js";
-import { getIncompleteVenueSlugs, updateVenueData } from "../mongo/utils.js";
+import { getVenueInfo } from './utils/placesApi.js';
+import { getIncompleteVenueSlugs, updateVenueData } from '../mongo/utils.js';
 
 const processIncompleteVenues = async () => {
-  console.log("Finding incomplete venues..........");
+  console.log('Finding incomplete venues..........');
   // get all values without "dateScraped" property
   const incompletePlaces = await getIncompleteVenueSlugs();
 
@@ -14,26 +14,29 @@ const processIncompleteVenues = async () => {
       incompletePlaces.map(async ({ slug, name }) => {
         console.log(`Getting place data for venue: ${slug}`);
         // @TODO: decide what to do google API errors
-        await getVenueInfo(name).then((res) => {
-          placeList.push({
-            ...res,
-            slug, 
-            name,
-            hasError: false
-          });
-        }).catch((e) => {
-          placeList.push({
-            slug, 
-            name,
-            hasError: true
+        await getVenueInfo(name)
+          .then((res) => {
+            // @TODO: include venue description for fidelity check
+            placeList.push({
+              ...res,
+              slug,
+              name,
+              hasError: false,
+            });
           })
-          console.error(`Error getting place data for ${slug} - ${e}`)
-        });
+          .catch((e) => {
+            placeList.push({
+              slug,
+              name,
+              hasError: true,
+            });
+            console.error(`Error getting place data for ${slug} - ${e}`);
+          });
       })
     );
 
     // loop through them all and save to Mongo
-    console.log("Saving new venues..........");
+    console.log('Saving new venues..........');
     await Promise.all(
       placeList.map(async (place) => {
         await updateVenueData(place)
@@ -49,6 +52,6 @@ const processIncompleteVenues = async () => {
   } else {
     console.log(`No new venues found`);
   }
-}
+};
 
 export default processIncompleteVenues;

@@ -7,8 +7,9 @@ import {
   getHistories,
   getEarliestHistory,
   getMostRecentHistory,
-  getEventsByVenue
-} from "../mongo/utils.js";
+  getEventsByVenue,
+  getAllEventsInRange,
+} from '../mongo/utils.js';
 
 export const resolvers = {
   Query: {
@@ -25,6 +26,10 @@ export const resolvers = {
     events: async (_, args) => {
       const { input } = args;
       return await getAllEvents(input);
+    },
+    eventsInRange: async (_, args) => {
+      const { dateRange, limit } = args;
+      return await getAllEventsInRange({ dateRange, limit: limit || 100 });
     },
     venue: async (_, args) => {
       const { slug } = args;
@@ -43,10 +48,10 @@ export const resolvers = {
       return await getHistories(dateRange);
     },
     fullHistory: async () => {
-      const earliest = await getEarliestHistory()
-      const mostRecent = await getMostRecentHistory()
-      return await getHistories({ start: earliest[0].dateString, end: mostRecent[0].dateString});
-    }
+      const earliest = await getEarliestHistory();
+      const mostRecent = await getMostRecentHistory();
+      return await getHistories({ start: earliest[0].dateString, end: mostRecent[0].dateString });
+    },
   },
   Event: {
     venue: async (parent) => {

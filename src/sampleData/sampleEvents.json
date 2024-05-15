@@ -1,680 +1,680 @@
 [
-    {
-      "venueSlug": "21st-amendment",
-      "name": "Ellis & The Shambles",
-      "date": "Friday,  February 10\n      at\n\n      3:00pm",
-      "id": "863836"
-    },
-    {
-      "venueSlug": "21st-amendment",
-      "name": "Marty Peters & The Party Meters",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "863781"
-    },
-    {
-      "venueSlug": "30-90",
-      "name": "Maude Callait Quartet",
-      "date": "Friday,  February 10\n      at\n\n      4:00pm",
-      "id": "860686"
-    },
-    {
-      "venueSlug": "30-90",
-      "name": "The Essentials",
-      "date": "Friday,  February 10\n      at\n\n      7:30pm",
-      "id": "860691"
-    },
-    {
-      "venueSlug": "30-90",
-      "name": "Street Lyfe",
-      "date": "Friday,  February 10\n      at\n\n      11:00pm",
-      "id": "860696"
-    },
-    {
-      "venueSlug": "apple-barrel",
-      "name": "Mark Appleford",
-      "date": "Friday,  February 10\n      at\n\n      6:00pm",
-      "id": "855621"
-    },
-    {
-      "venueSlug": "bacchanal-outdoors",
-      "name": "Raphael Bas",
-      "date": "Friday,  February 10\n      at\n\n      12:00pm",
-      "id": "865986"
-    },
-    {
-      "venueSlug": "bacchanal-outdoors",
-      "name": "Lani B. Supreme",
-      "date": "Friday,  February 10\n      at\n\n      3:30pm",
-      "id": "865991"
-    },
-    {
-      "venueSlug": "bacchanal-outdoors",
-      "name": "Willie Green III",
-      "date": "Friday,  February 10\n      at\n\n      7:00pm",
-      "id": "860876"
-    },
-    {
-      "venueSlug": "bamboulas",
-      "name": "The Villains",
-      "date": "Friday,  February 10\n      at\n\n      2:15pm",
-      "id": "857556"
-    },
-    {
-      "venueSlug": "bamboulas",
-      "name": "Les Getrex & Creole Cooking",
-      "date": "Friday,  February 10\n      at\n\n      6:30pm",
-      "id": "857716"
-    },
-    {
-      "venueSlug": "bamboulas",
-      "name": "Paggy Prine",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "857731"
-    },
-    {
-      "venueSlug": "bayou-bar-pontchartrain",
-      "name": "YYRP ft. Peter Harris, Joe Ashlar, John Maestas, Simon Lott, and Ed Perkins",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "864791"
-    },
-    {
-      "venueSlug": "bjs-lounge",
-      "name": "Louis Michot",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "865446"
-    },
-    {
-      "venueSlug": "blue-nile",
-      "name": "The Caesar Brothers' Funkbox",
-      "date": "Friday,  February 10\n      at\n\n      7:00pm",
-      "id": "863161"
-    },
-    {
-      "venueSlug": "blue-nile",
-      "name": "Kermit Ruffins & The BBQ Swingers",
-      "date": "Friday,  February 10\n      at\n\n      11:00pm",
-      "id": "863181"
-    },
-    {
-      "venueSlug": "blue-nile-balcony-room",
-      "name": "Trumpet Slim &  Brass Flavor",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "863111"
-    },
-    {
-      "venueSlug": "bmc",
-      "name": "The Duane Bartels Band",
-      "date": "Friday,  February 10\n      at\n\n      3:00pm",
-      "id": "866026"
-    },
-    {
-      "venueSlug": "bmc",
-      "name": "Lil Red & Big Bad",
-      "date": "Friday,  February 10\n      at\n\n      6:30pm",
-      "id": "859286"
-    },
-    {
-      "venueSlug": "bmc",
-      "name": "Single Malt Please",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "866031"
-    },
-    {
-      "venueSlug": "bratz-yall",
-      "name": "Dick Deluxe",
-      "date": "Friday,  February 10\n      at\n\n      5:00pm",
-      "id": "864551"
-    },
-    {
-      "venueSlug": "buffas",
-      "name": "Gumbo Cabaret Kelly Dixson, Rebecca Leigh & Harry Mayronne",
-      "date": "Friday,  February 10\n      at\n\n      5:00pm",
-      "id": "865996"
-    },
-    {
-      "venueSlug": "buffas",
-      "name": "Dayna Kurtz & Robert Maché",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "861111"
-    },
-    {
-      "venueSlug": "bullets-sports-bar",
-      "name": "Sporty's Brass Band",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "862616"
-    },
-    {
-      "venueSlug": "cafe-negril",
-      "name": "Paradise Jazz Band",
-      "date": "Friday,  February 10\n      at\n\n      1:00pm",
-      "id": "861286"
-    },
-    {
-      "venueSlug": "cafe-negril",
-      "name": "Bon Bon Vivant",
-      "date": "Friday,  February 10\n      at\n\n      6:00pm",
-      "id": "861316"
-    },
-    {
-      "venueSlug": "cafe-negril",
-      "name": "Higher Heights",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "861266"
-    },
-    {
-      "venueSlug": "canopy-hilton-new-orleans-downtown",
-      "name": "Britney Chauntae",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "865476"
-    },
-    {
-      "venueSlug": "carousel-lounge-hotel-monteleone",
-      "name": "Richard Scott",
-      "date": "Friday,  February 10\n      at\n\n      5:30pm",
-      "id": "864631"
-    },
-    {
-      "venueSlug": "carousel-lounge-hotel-monteleone",
-      "name": "Nayo Jones Experience",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "864716"
-    },
-    {
-      "venueSlug": "carrollton-station",
-      "name": "Abby & The Arsonists + Gabe Parsons & The Heartland + Apricot Jam",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "859866"
-    },
-    {
-      "venueSlug": "chickie-wah-wah",
-      "name": "Alex McMurray",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "856541"
-    },
-    {
-      "venueSlug": "civic-theatre",
-      "name": "Bal Kanaval ft. RAM, 79rs Gang, Cimafunk & More!",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "862516"
-    },
-    {
-      "venueSlug": "commons-club-virgin-hotels-new-orleans",
-      "name": "DJ Rusty Lazer",
-      "date": "Friday,  February 10\n      at\n\n      11:00am",
-      "id": "856741"
-    },
-    {
-      "venueSlug": "commons-club-virgin-hotels-new-orleans",
-      "name": "DJ Heelturn",
-      "date": "Friday,  February 10\n      at\n\n      3:00pm",
-      "id": "856751"
-    },
-    {
-      "venueSlug": "crescent-city-brewhouse",
-      "name": "Jazz Quartet with Ricky Knight",
-      "date": "Friday,  February 10\n      at\n\n      6:00pm",
-      "id": "864176"
-    },
-    {
-      "venueSlug": "dba",
-      "name": "Smoking Time Jazz Club",
-      "date": "Friday,  February 10\n      at\n\n      5:00pm",
-      "id": "856451"
-    },
-    {
-      "venueSlug": "dba",
-      "name": "Soul Rebels",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "856456"
-    },
-    {
-      "venueSlug": "davenport-lounge-ritz-carlton",
-      "name": "Jeremy Davenport",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "865216"
-    },
-    {
-      "venueSlug": "dos-jefes",
-      "name": "Ashley Beach & The Oddities",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "860271"
-    },
-    {
-      "venueSlug": "el-cucuy",
-      "name": "Dusky Waters",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "860081"
-    },
-    {
-      "venueSlug": "fourth-wall",
-      "name": "Cristina Kaminis & The Mix",
-      "date": "Friday,  February 10\n      at\n\n      5:00pm",
-      "id": "860981"
-    },
-    {
-      "venueSlug": "french-market-outdoors",
-      "name": "Manuel Arteaga’s Trio",
-      "date": "Friday,  February 10\n      at\n\n      11:30am",
-      "id": "847306"
-    },
-    {
-      "venueSlug": "fritzels-jazz-club",
-      "name": "Richard \"Piano\" Scott",
-      "date": "Friday,  February 10\n      at\n\n      12:30pm",
-      "id": "857911"
-    },
-    {
-      "venueSlug": "fritzels-jazz-club",
-      "name": "Sam Friend Band",
-      "date": "Friday,  February 10\n      at\n\n      2:30pm",
-      "id": "858111"
-    },
-    {
-      "venueSlug": "fritzels-jazz-club",
-      "name": "Lee Floyd & Thunderbolt Trio",
-      "date": "Friday,  February 10\n      at\n\n      6:00pm",
-      "id": "858131"
-    },
-    {
-      "venueSlug": "fritzels-jazz-club",
-      "name": "Fritzel's All Star Band ft. Kevin Ray Clark",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "858051"
-    },
-    {
-      "venueSlug": "garage-music-club",
-      "name": "Johnny Mastro",
-      "date": "Friday,  February 10\n      at\n\n      5:00pm",
-      "id": "862871"
-    },
-    {
-      "venueSlug": "gasa-gasa",
-      "name": "Incubators with Mig and Sean Smith",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "857096"
-    },
-    {
-      "venueSlug": "goat",
-      "name": "The River Dragon + Makeshift Tape Deck + Landlocked Seas + Rayshaugn & Baker",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "857416"
-    },
-    {
-      "venueSlug": "house-blues",
-      "name": "Alaska 5000",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "857366"
-    },
-    {
-      "venueSlug": "house-blues-foundation-room",
-      "name": "Vanessa Car",
-      "date": "Friday,  February 10\n      at\n\n      6:00pm",
-      "id": "863416"
-    },
-    {
-      "venueSlug": "house-blues-foundation-room",
-      "name": "DJ Fayard Lindsey",
-      "date": "Friday,  February 10\n      at\n\n      9:30pm",
-      "id": "863391"
-    },
-    {
-      "venueSlug": "house-blues-voodoo-garden-outdoors",
-      "name": "Will Dickerson Trio",
-      "date": "Friday,  February 10\n      at\n\n      5:30pm",
-      "id": "863326"
-    },
-    {
-      "venueSlug": "irenes",
-      "name": "Monty Banks",
-      "date": "Friday,  February 10\n      at\n\n      6:00pm",
-      "id": "845881"
-    },
-    {
-      "venueSlug": "jazz-playhouse",
-      "name": "Trixie Minx's Burlesque Ballroom ft. Romy Kaye",
-      "date": "Friday,  February 10\n      at\n\n      7:00pm",
-      "id": "856991"
-    },
-    {
-      "venueSlug": "jazz-playhouse",
-      "name": "Trixie Minx's Burlesque Ballroom ft. Romy Kaye",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "856996"
-    },
-    {
-      "venueSlug": "kerry-irish-pub",
-      "name": "Patrick Cooper",
-      "date": "Friday,  February 10\n      at\n\n      5:00pm",
-      "id": "855941"
-    },
-    {
-      "venueSlug": "le-bon-temps-roule",
-      "name": "Sneezy",
-      "date": "Friday,  February 10\n      at\n\n      11:00pm",
-      "id": "865361"
-    },
-    {
-      "venueSlug": "link-nola",
-      "name": "MLG Band",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "865801"
-    },
-    {
-      "venueSlug": "madame-vics",
-      "name": "Anna Bernard with Tony Seville and Dylan Torrance",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "862556"
-    },
-    {
-      "venueSlug": "mahogany-jazz-hall",
-      "name": "Smoking Time Jazz Club Trio",
-      "date": "Friday,  February 10\n      at\n\n      6:30pm",
-      "id": "859656"
-    },
-    {
-      "venueSlug": "mahogany-jazz-hall",
-      "name": "Mahogany Jazz Hall All Stars Band",
-      "date": "Friday,  February 10\n      at\n\n      9:30pm",
-      "id": "859686"
-    },
-    {
-      "venueSlug": "maison",
-      "name": "Swingin’ Gypsies",
-      "date": "Friday,  February 10\n      at\n\n      4:00pm",
-      "id": "861711"
-    },
-    {
-      "venueSlug": "maison",
-      "name": "Shotgun Jazz Band",
-      "date": "Friday,  February 10\n      at\n\n      7:00pm",
-      "id": "861716"
-    },
-    {
-      "venueSlug": "maison",
-      "name": "Armando Leduc & Salsa Royale",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "861721"
-    },
-    {
-      "venueSlug": "maison-bourbon-jazz-club",
-      "name": "Kid Merv & All That Jazz",
-      "date": "Friday,  February 10\n      at\n\n      2:00pm",
-      "id": "864861"
-    },
-    {
-      "venueSlug": "maison-dupuy",
-      "name": "Blues Night with The Unbelievablues",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "863666"
-    },
-    {
-      "venueSlug": "maple-leaf",
-      "name": "Amanda Shaw",
-      "date": "Friday,  February 10\n      at\n\n      7:00pm",
-      "id": "860001"
-    },
-    {
-      "venueSlug": "maple-leaf",
-      "name": "Russell Batiste & Friends",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "860006"
-    },
-    {
-      "venueSlug": "may-bailys-place",
-      "name": "Nanci Zee",
-      "date": "Friday,  February 10\n      at\n\n      4:30pm",
-      "id": "864246"
-    },
-    {
-      "venueSlug": "may-bailys-place",
-      "name": "Amber & The Sweet Potatoes",
-      "date": "Friday,  February 10\n      at\n\n      8:30pm",
-      "id": "864251"
-    },
-    {
-      "venueSlug": "mid-city-lanes-rock-n-bowl",
-      "name": "Category 6",
-      "date": "Friday,  February 10\n      at\n\n      8:30pm",
-      "id": "847926"
-    },
-    {
-      "venueSlug": "mrb",
-      "name": "Anna Quinn & Ed Barrett",
-      "date": "Friday,  February 10\n      at\n\n      7:00pm",
-      "id": "859356"
-    },
-    {
-      "venueSlug": "music-box-village-outdoors",
-      "name": "Vivi & The Inspektor with special guests Sam Yoger and Kunal Prakash",
-      "date": "Friday,  February 10\n      at\n\n      7:00pm",
-      "id": "856186"
-    },
-    {
-      "venueSlug": "neutral-ground-coffeehouse-exile",
-      "name": "Jay Walkers",
-      "date": "Friday,  February 10\n      at\n\n      7:30pm",
-      "id": "859476"
-    },
-    {
-      "venueSlug": "neutral-ground-coffeehouse-exile",
-      "name": "Father Ron",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "859471"
-    },
-    {
-      "venueSlug": "new-orleans-jazz-museum",
-      "name": "Roderick Paulin",
-      "date": "Friday,  February 10\n      at\n\n      2:00pm",
-      "id": "862446"
-    },
-    {
-      "venueSlug": "new-orleans-jazz-national-historic-park",
-      "name": "Victor Campbell & The Immigrant Family",
-      "date": "Friday,  February 10\n      at\n\n      2:00pm",
-      "id": "860146"
-    },
-    {
-      "venueSlug": "nola-brewing",
-      "name": "The Bruisers",
-      "date": "Friday,  February 10\n      at\n\n      6:00pm",
-      "id": "860386"
-    },
-    {
-      "venueSlug": "nopsi-hotel",
-      "name": "Matt Lemmler’s “New Orleans in Stride”",
-      "date": "Friday,  February 10\n      at\n\n      5:30pm",
-      "id": "853576"
-    },
-    {
-      "venueSlug": "old-point-bar",
-      "name": "The Peacock Ball ft. The Yakameiniacs",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "859401"
-    },
-    {
-      "venueSlug": "palm-court-jazz-cafe",
-      "name": "Kevin Louis & Yolanda Robinson with Palm Court Jazz Band",
-      "date": "Friday,  February 10\n      at\n\n      7:30pm",
-      "id": "856261"
-    },
-    {
-      "venueSlug": "polo-club-lounge-windsor-court-hotel",
-      "name": "John Royen",
-      "date": "Friday,  February 10\n      at\n\n      5:30pm",
-      "id": "866176"
-    },
-    {
-      "venueSlug": "polo-club-lounge-windsor-court-hotel",
-      "name": "Robin Barnes",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "866091"
-    },
-    {
-      "venueSlug": "pour-house-district",
-      "name": "Cabaret Masquerade with La La Sol & Ana de Ferreira",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "856916"
-    },
-    {
-      "venueSlug": "pour-house-jefferson",
-      "name": "John Krupa Project",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "856881"
-    },
-    {
-      "venueSlug": "preservation-hall",
-      "name": "Preservation All-Stars ft. Mark Braud",
-      "date": "Friday,  February 10\n      at\n\n      5:00pm",
-      "id": "858711"
-    },
-    {
-      "venueSlug": "preservation-hall",
-      "name": "Preservation All-Stars ft. Mark Braud",
-      "date": "Friday,  February 10\n      at\n\n      6:15pm",
-      "id": "858726"
-    },
-    {
-      "venueSlug": "preservation-hall",
-      "name": "Preservation All-Stars ft. Mark Braud",
-      "date": "Friday,  February 10\n      at\n\n      7:30pm",
-      "id": "858741"
-    },
-    {
-      "venueSlug": "preservation-hall",
-      "name": "Preservation All-Stars ft. Mark Braud",
-      "date": "Friday,  February 10\n      at\n\n      8:45pm",
-      "id": "858756"
-    },
-    {
-      "venueSlug": "rabbit-hole",
-      "name": "Valhalla Ball Ft. DJ Crushed Velvet & More!",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "855451"
-    },
-    {
-      "venueSlug": "republic-new-orleans",
-      "name": "Freaky Friday ft. Merger PlayerOne, Miiin & More!",
-      "date": "Friday,  February 10\n      at\n\n      10:30pm",
-      "id": "866001"
-    },
-    {
-      "venueSlug": "roosevelt-hotel-fountain-lounge",
-      "name": "Antoine Diel & Josh Paxton",
-      "date": "Friday,  February 10\n      at\n\n      6:00pm",
-      "id": "855731"
-    },
-    {
-      "venueSlug": "santos-bar",
-      "name": "Marina Orchestra with TV Pole Shine",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "857256"
-    },
-    {
-      "venueSlug": "santos-bar-upstairs",
-      "name": "DJ Karo",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "857226"
-    },
-    {
-      "venueSlug": "saturn-bar",
-      "name": "Conjunto Tierra Linda",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "863026"
-    },
-    {
-      "venueSlug": "siberia",
-      "name": "The Cult of Chunk, Ded Debbie, The Nancies & More!",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "864761"
-    },
-    {
-      "venueSlug": "sidneys-saloon",
-      "name": "DarkLounge Ministries",
-      "date": "Friday,  February 10\n      at\n\n      7:00pm",
-      "id": "857291"
-    },
-    {
-      "venueSlug": "sidneys-saloon",
-      "name": "Bay Street with Floor Space",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "857331"
-    },
-    {
-      "venueSlug": "snug-harbor",
-      "name": "Jason Marsalis Presents the Ellis Marsalis Songbook",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "859151"
-    },
-    {
-      "venueSlug": "snug-harbor",
-      "name": "Jason Marsalis Presents the Ellis Marsalis Songbook",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "859146"
-    },
-    {
-      "venueSlug": "spotted-cat",
-      "name": "New Orleans Cottonmouth Kings",
-      "date": "Friday,  February 10\n      at\n\n      6:00pm",
-      "id": "862111"
-    },
-    {
-      "venueSlug": "spotted-cat",
-      "name": "Smokin' On Some Brass",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "862126"
-    },
-    {
-      "venueSlug": "three-keys-ace-hotel",
-      "name": "Water Seed's Wild Nights",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "864316"
-    },
-    {
-      "venueSlug": "three-keys-ace-hotel",
-      "name": "DJ G",
-      "date": "Friday,  February 10\n      at\n\n      10:30pm",
-      "id": "864321"
-    },
-    {
-      "venueSlug": "three-muses",
-      "name": "Keith Burnstein",
-      "date": "Friday,  February 10\n      at\n\n      5:00pm",
-      "id": "863626"
-    },
-    {
-      "venueSlug": "three-muses",
-      "name": "Giselle Anguizola",
-      "date": "Friday,  February 10\n      at\n\n      8:00pm",
-      "id": "863516"
-    },
-    {
-      "venueSlug": "tipitinas",
-      "name": "Lucero + Justin Wells",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "831936"
-    },
-    {
-      "venueSlug": "toulouse-theatre-0",
-      "name": "Superdome Bodhi: A Tribute to Jerry Garcia ft. Robbie Smith, Brooks Hubbert III, Mi…",
-      "date": "Friday,  February 10\n      at\n\n      10:00pm",
-      "id": "862521"
-    },
-    {
-      "venueSlug": "vintage-voyage",
-      "name": "KatieCat & Cain Jazz Duo",
-      "date": "Friday,  February 10\n      at\n\n      6:00pm",
-      "id": "862846"
-    },
-    {
-      "venueSlug": "woodies-grill-bar",
-      "name": "Claude Hitt & Mike Clark",
-      "date": "Friday,  February 10\n      at\n\n      6:00pm",
-      "id": "856576"
-    },
-    {
-      "venueSlug": "zony-mash-beer-project",
-      "name": "The Rumble: Tribute to The Wild Magnolias",
-      "date": "Friday,  February 10\n      at\n\n      9:00pm",
-      "id": "864111"
-    }
-  ]
+  {
+    "venueSlug": "21st-amendment",
+    "name": "Ellis & The Shambles",
+    "date": "Friday,  February 10\n      at\n\n      3:00pm",
+    "id": "863836"
+  },
+  {
+    "venueSlug": "21st-amendment",
+    "name": "Marty Peters & The Party Meters",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "863781"
+  },
+  {
+    "venueSlug": "30-90",
+    "name": "Maude Callait Quartet",
+    "date": "Friday,  February 10\n      at\n\n      4:00pm",
+    "id": "860686"
+  },
+  {
+    "venueSlug": "30-90",
+    "name": "The Essentials",
+    "date": "Friday,  February 10\n      at\n\n      7:30pm",
+    "id": "860691"
+  },
+  {
+    "venueSlug": "30-90",
+    "name": "Street Lyfe",
+    "date": "Friday,  February 10\n      at\n\n      11:00pm",
+    "id": "860696"
+  },
+  {
+    "venueSlug": "apple-barrel",
+    "name": "Mark Appleford",
+    "date": "Friday,  February 10\n      at\n\n      6:00pm",
+    "id": "855621"
+  },
+  {
+    "venueSlug": "bacchanal-outdoors",
+    "name": "Raphael Bas",
+    "date": "Friday,  February 10\n      at\n\n      12:00pm",
+    "id": "865986"
+  },
+  {
+    "venueSlug": "bacchanal-outdoors",
+    "name": "Lani B. Supreme",
+    "date": "Friday,  February 10\n      at\n\n      3:30pm",
+    "id": "865991"
+  },
+  {
+    "venueSlug": "bacchanal-outdoors",
+    "name": "Willie Green III",
+    "date": "Friday,  February 10\n      at\n\n      7:00pm",
+    "id": "860876"
+  },
+  {
+    "venueSlug": "bamboulas",
+    "name": "The Villains",
+    "date": "Friday,  February 10\n      at\n\n      2:15pm",
+    "id": "857556"
+  },
+  {
+    "venueSlug": "bamboulas",
+    "name": "Les Getrex & Creole Cooking",
+    "date": "Friday,  February 10\n      at\n\n      6:30pm",
+    "id": "857716"
+  },
+  {
+    "venueSlug": "bamboulas",
+    "name": "Paggy Prine",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "857731"
+  },
+  {
+    "venueSlug": "bayou-bar-pontchartrain",
+    "name": "YYRP ft. Peter Harris, Joe Ashlar, John Maestas, Simon Lott, and Ed Perkins",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "864791"
+  },
+  {
+    "venueSlug": "bjs-lounge",
+    "name": "Louis Michot",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "865446"
+  },
+  {
+    "venueSlug": "blue-nile",
+    "name": "The Caesar Brothers' Funkbox",
+    "date": "Friday,  February 10\n      at\n\n      7:00pm",
+    "id": "863161"
+  },
+  {
+    "venueSlug": "blue-nile",
+    "name": "Kermit Ruffins & The BBQ Swingers",
+    "date": "Friday,  February 10\n      at\n\n      11:00pm",
+    "id": "863181"
+  },
+  {
+    "venueSlug": "blue-nile-balcony-room",
+    "name": "Trumpet Slim &  Brass Flavor",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "863111"
+  },
+  {
+    "venueSlug": "bmc",
+    "name": "The Duane Bartels Band",
+    "date": "Friday,  February 10\n      at\n\n      3:00pm",
+    "id": "866026"
+  },
+  {
+    "venueSlug": "bmc",
+    "name": "Lil Red & Big Bad",
+    "date": "Friday,  February 10\n      at\n\n      6:30pm",
+    "id": "859286"
+  },
+  {
+    "venueSlug": "bmc",
+    "name": "Single Malt Please",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "866031"
+  },
+  {
+    "venueSlug": "bratz-yall",
+    "name": "Dick Deluxe",
+    "date": "Friday,  February 10\n      at\n\n      5:00pm",
+    "id": "864551"
+  },
+  {
+    "venueSlug": "buffas",
+    "name": "Gumbo Cabaret Kelly Dixson, Rebecca Leigh & Harry Mayronne",
+    "date": "Friday,  February 10\n      at\n\n      5:00pm",
+    "id": "865996"
+  },
+  {
+    "venueSlug": "buffas",
+    "name": "Dayna Kurtz & Robert Maché",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "861111"
+  },
+  {
+    "venueSlug": "bullets-sports-bar",
+    "name": "Sporty's Brass Band",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "862616"
+  },
+  {
+    "venueSlug": "cafe-negril",
+    "name": "Paradise Jazz Band",
+    "date": "Friday,  February 10\n      at\n\n      1:00pm",
+    "id": "861286"
+  },
+  {
+    "venueSlug": "cafe-negril",
+    "name": "Bon Bon Vivant",
+    "date": "Friday,  February 10\n      at\n\n      6:00pm",
+    "id": "861316"
+  },
+  {
+    "venueSlug": "cafe-negril",
+    "name": "Higher Heights",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "861266"
+  },
+  {
+    "venueSlug": "canopy-hilton-new-orleans-downtown",
+    "name": "Britney Chauntae",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "865476"
+  },
+  {
+    "venueSlug": "carousel-lounge-hotel-monteleone",
+    "name": "Richard Scott",
+    "date": "Friday,  February 10\n      at\n\n      5:30pm",
+    "id": "864631"
+  },
+  {
+    "venueSlug": "carousel-lounge-hotel-monteleone",
+    "name": "Nayo Jones Experience",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "864716"
+  },
+  {
+    "venueSlug": "carrollton-station",
+    "name": "Abby & The Arsonists + Gabe Parsons & The Heartland + Apricot Jam",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "859866"
+  },
+  {
+    "venueSlug": "chickie-wah-wah",
+    "name": "Alex McMurray",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "856541"
+  },
+  {
+    "venueSlug": "civic-theatre",
+    "name": "Bal Kanaval ft. RAM, 79rs Gang, Cimafunk & More!",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "862516"
+  },
+  {
+    "venueSlug": "commons-club-virgin-hotels-new-orleans",
+    "name": "DJ Rusty Lazer",
+    "date": "Friday,  February 10\n      at\n\n      11:00am",
+    "id": "856741"
+  },
+  {
+    "venueSlug": "commons-club-virgin-hotels-new-orleans",
+    "name": "DJ Heelturn",
+    "date": "Friday,  February 10\n      at\n\n      3:00pm",
+    "id": "856751"
+  },
+  {
+    "venueSlug": "crescent-city-brewhouse",
+    "name": "Jazz Quartet with Ricky Knight",
+    "date": "Friday,  February 10\n      at\n\n      6:00pm",
+    "id": "864176"
+  },
+  {
+    "venueSlug": "dba",
+    "name": "Smoking Time Jazz Club",
+    "date": "Friday,  February 10\n      at\n\n      5:00pm",
+    "id": "856451"
+  },
+  {
+    "venueSlug": "dba",
+    "name": "Soul Rebels",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "856456"
+  },
+  {
+    "venueSlug": "davenport-lounge-ritz-carlton",
+    "name": "Jeremy Davenport",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "865216"
+  },
+  {
+    "venueSlug": "dos-jefes",
+    "name": "Ashley Beach & The Oddities",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "860271"
+  },
+  {
+    "venueSlug": "el-cucuy",
+    "name": "Dusky Waters",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "860081"
+  },
+  {
+    "venueSlug": "fourth-wall",
+    "name": "Cristina Kaminis & The Mix",
+    "date": "Friday,  February 10\n      at\n\n      5:00pm",
+    "id": "860981"
+  },
+  {
+    "venueSlug": "french-market-outdoors",
+    "name": "Manuel Arteaga’s Trio",
+    "date": "Friday,  February 10\n      at\n\n      11:30am",
+    "id": "847306"
+  },
+  {
+    "venueSlug": "fritzels-jazz-club",
+    "name": "Richard \"Piano\" Scott",
+    "date": "Friday,  February 10\n      at\n\n      12:30pm",
+    "id": "857911"
+  },
+  {
+    "venueSlug": "fritzels-jazz-club",
+    "name": "Sam Friend Band",
+    "date": "Friday,  February 10\n      at\n\n      2:30pm",
+    "id": "858111"
+  },
+  {
+    "venueSlug": "fritzels-jazz-club",
+    "name": "Lee Floyd & Thunderbolt Trio",
+    "date": "Friday,  February 10\n      at\n\n      6:00pm",
+    "id": "858131"
+  },
+  {
+    "venueSlug": "fritzels-jazz-club",
+    "name": "Fritzel's All Star Band ft. Kevin Ray Clark",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "858051"
+  },
+  {
+    "venueSlug": "garage-music-club",
+    "name": "Johnny Mastro",
+    "date": "Friday,  February 10\n      at\n\n      5:00pm",
+    "id": "862871"
+  },
+  {
+    "venueSlug": "gasa-gasa",
+    "name": "Incubators with Mig and Sean Smith",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "857096"
+  },
+  {
+    "venueSlug": "goat",
+    "name": "The River Dragon + Makeshift Tape Deck + Landlocked Seas + Rayshaugn & Baker",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "857416"
+  },
+  {
+    "venueSlug": "house-blues",
+    "name": "Alaska 5000",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "857366"
+  },
+  {
+    "venueSlug": "house-blues-foundation-room",
+    "name": "Vanessa Car",
+    "date": "Friday,  February 10\n      at\n\n      6:00pm",
+    "id": "863416"
+  },
+  {
+    "venueSlug": "house-blues-foundation-room",
+    "name": "DJ Fayard Lindsey",
+    "date": "Friday,  February 10\n      at\n\n      9:30pm",
+    "id": "863391"
+  },
+  {
+    "venueSlug": "house-blues-voodoo-garden-outdoors",
+    "name": "Will Dickerson Trio",
+    "date": "Friday,  February 10\n      at\n\n      5:30pm",
+    "id": "863326"
+  },
+  {
+    "venueSlug": "irenes",
+    "name": "Monty Banks",
+    "date": "Friday,  February 10\n      at\n\n      6:00pm",
+    "id": "845881"
+  },
+  {
+    "venueSlug": "jazz-playhouse",
+    "name": "Trixie Minx's Burlesque Ballroom ft. Romy Kaye",
+    "date": "Friday,  February 10\n      at\n\n      7:00pm",
+    "id": "856991"
+  },
+  {
+    "venueSlug": "jazz-playhouse",
+    "name": "Trixie Minx's Burlesque Ballroom ft. Romy Kaye",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "856996"
+  },
+  {
+    "venueSlug": "kerry-irish-pub",
+    "name": "Patrick Cooper",
+    "date": "Friday,  February 10\n      at\n\n      5:00pm",
+    "id": "855941"
+  },
+  {
+    "venueSlug": "le-bon-temps-roule",
+    "name": "Sneezy",
+    "date": "Friday,  February 10\n      at\n\n      11:00pm",
+    "id": "865361"
+  },
+  {
+    "venueSlug": "link-nola",
+    "name": "MLG Band",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "865801"
+  },
+  {
+    "venueSlug": "madame-vics",
+    "name": "Anna Bernard with Tony Seville and Dylan Torrance",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "862556"
+  },
+  {
+    "venueSlug": "mahogany-jazz-hall",
+    "name": "Smoking Time Jazz Club Trio",
+    "date": "Friday,  February 10\n      at\n\n      6:30pm",
+    "id": "859656"
+  },
+  {
+    "venueSlug": "mahogany-jazz-hall",
+    "name": "Mahogany Jazz Hall All Stars Band",
+    "date": "Friday,  February 10\n      at\n\n      9:30pm",
+    "id": "859686"
+  },
+  {
+    "venueSlug": "maison",
+    "name": "Swingin’ Gypsies",
+    "date": "Friday,  February 10\n      at\n\n      4:00pm",
+    "id": "861711"
+  },
+  {
+    "venueSlug": "maison",
+    "name": "Shotgun Jazz Band",
+    "date": "Friday,  February 10\n      at\n\n      7:00pm",
+    "id": "861716"
+  },
+  {
+    "venueSlug": "maison",
+    "name": "Armando Leduc & Salsa Royale",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "861721"
+  },
+  {
+    "venueSlug": "maison-bourbon-jazz-club",
+    "name": "Kid Merv & All That Jazz",
+    "date": "Friday,  February 10\n      at\n\n      2:00pm",
+    "id": "864861"
+  },
+  {
+    "venueSlug": "maison-dupuy",
+    "name": "Blues Night with The Unbelievablues",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "863666"
+  },
+  {
+    "venueSlug": "maple-leaf",
+    "name": "Amanda Shaw",
+    "date": "Friday,  February 10\n      at\n\n      7:00pm",
+    "id": "860001"
+  },
+  {
+    "venueSlug": "maple-leaf",
+    "name": "Russell Batiste & Friends",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "860006"
+  },
+  {
+    "venueSlug": "may-bailys-place",
+    "name": "Nanci Zee",
+    "date": "Friday,  February 10\n      at\n\n      4:30pm",
+    "id": "864246"
+  },
+  {
+    "venueSlug": "may-bailys-place",
+    "name": "Amber & The Sweet Potatoes",
+    "date": "Friday,  February 10\n      at\n\n      8:30pm",
+    "id": "864251"
+  },
+  {
+    "venueSlug": "mid-city-lanes-rock-n-bowl",
+    "name": "Category 6",
+    "date": "Friday,  February 10\n      at\n\n      8:30pm",
+    "id": "847926"
+  },
+  {
+    "venueSlug": "mrb",
+    "name": "Anna Quinn & Ed Barrett",
+    "date": "Friday,  February 10\n      at\n\n      7:00pm",
+    "id": "859356"
+  },
+  {
+    "venueSlug": "music-box-village-outdoors",
+    "name": "Vivi & The Inspektor with special guests Sam Yoger and Kunal Prakash",
+    "date": "Friday,  February 10\n      at\n\n      7:00pm",
+    "id": "856186"
+  },
+  {
+    "venueSlug": "neutral-ground-coffeehouse-exile",
+    "name": "Jay Walkers",
+    "date": "Friday,  February 10\n      at\n\n      7:30pm",
+    "id": "859476"
+  },
+  {
+    "venueSlug": "neutral-ground-coffeehouse-exile",
+    "name": "Father Ron",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "859471"
+  },
+  {
+    "venueSlug": "new-orleans-jazz-museum",
+    "name": "Roderick Paulin",
+    "date": "Friday,  February 10\n      at\n\n      2:00pm",
+    "id": "862446"
+  },
+  {
+    "venueSlug": "new-orleans-jazz-national-historic-park",
+    "name": "Victor Campbell & The Immigrant Family",
+    "date": "Friday,  February 10\n      at\n\n      2:00pm",
+    "id": "860146"
+  },
+  {
+    "venueSlug": "nola-brewing",
+    "name": "The Bruisers",
+    "date": "Friday,  February 10\n      at\n\n      6:00pm",
+    "id": "860386"
+  },
+  {
+    "venueSlug": "nopsi-hotel",
+    "name": "Matt Lemmler’s “New Orleans in Stride”",
+    "date": "Friday,  February 10\n      at\n\n      5:30pm",
+    "id": "853576"
+  },
+  {
+    "venueSlug": "old-point-bar",
+    "name": "The Peacock Ball ft. The Yakameiniacs",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "859401"
+  },
+  {
+    "venueSlug": "palm-court-jazz-cafe",
+    "name": "Kevin Louis & Yolanda Robinson with Palm Court Jazz Band",
+    "date": "Friday,  February 10\n      at\n\n      7:30pm",
+    "id": "856261"
+  },
+  {
+    "venueSlug": "polo-club-lounge-windsor-court-hotel",
+    "name": "John Royen",
+    "date": "Friday,  February 10\n      at\n\n      5:30pm",
+    "id": "866176"
+  },
+  {
+    "venueSlug": "polo-club-lounge-windsor-court-hotel",
+    "name": "Robin Barnes",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "866091"
+  },
+  {
+    "venueSlug": "pour-house-district",
+    "name": "Cabaret Masquerade with La La Sol & Ana de Ferreira",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "856916"
+  },
+  {
+    "venueSlug": "pour-house-jefferson",
+    "name": "John Krupa Project",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "856881"
+  },
+  {
+    "venueSlug": "preservation-hall",
+    "name": "Preservation All-Stars ft. Mark Braud",
+    "date": "Friday,  February 10\n      at\n\n      5:00pm",
+    "id": "858711"
+  },
+  {
+    "venueSlug": "preservation-hall",
+    "name": "Preservation All-Stars ft. Mark Braud",
+    "date": "Friday,  February 10\n      at\n\n      6:15pm",
+    "id": "858726"
+  },
+  {
+    "venueSlug": "preservation-hall",
+    "name": "Preservation All-Stars ft. Mark Braud",
+    "date": "Friday,  February 10\n      at\n\n      7:30pm",
+    "id": "858741"
+  },
+  {
+    "venueSlug": "preservation-hall",
+    "name": "Preservation All-Stars ft. Mark Braud",
+    "date": "Friday,  February 10\n      at\n\n      8:45pm",
+    "id": "858756"
+  },
+  {
+    "venueSlug": "rabbit-hole",
+    "name": "Valhalla Ball Ft. DJ Crushed Velvet & More!",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "855451"
+  },
+  {
+    "venueSlug": "republic-new-orleans",
+    "name": "Freaky Friday ft. Merger PlayerOne, Miiin & More!",
+    "date": "Friday,  February 10\n      at\n\n      10:30pm",
+    "id": "866001"
+  },
+  {
+    "venueSlug": "roosevelt-hotel-fountain-lounge",
+    "name": "Antoine Diel & Josh Paxton",
+    "date": "Friday,  February 10\n      at\n\n      6:00pm",
+    "id": "855731"
+  },
+  {
+    "venueSlug": "santos-bar",
+    "name": "Marina Orchestra with TV Pole Shine",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "857256"
+  },
+  {
+    "venueSlug": "santos-bar-upstairs",
+    "name": "DJ Karo",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "857226"
+  },
+  {
+    "venueSlug": "saturn-bar",
+    "name": "Conjunto Tierra Linda",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "863026"
+  },
+  {
+    "venueSlug": "siberia",
+    "name": "The Cult of Chunk, Ded Debbie, The Nancies & More!",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "864761"
+  },
+  {
+    "venueSlug": "sidneys-saloon",
+    "name": "DarkLounge Ministries",
+    "date": "Friday,  February 10\n      at\n\n      7:00pm",
+    "id": "857291"
+  },
+  {
+    "venueSlug": "sidneys-saloon",
+    "name": "Bay Street with Floor Space",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "857331"
+  },
+  {
+    "venueSlug": "snug-harbor",
+    "name": "Jason Marsalis Presents the Ellis Marsalis Songbook",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "859151"
+  },
+  {
+    "venueSlug": "snug-harbor",
+    "name": "Jason Marsalis Presents the Ellis Marsalis Songbook",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "859146"
+  },
+  {
+    "venueSlug": "spotted-cat",
+    "name": "New Orleans Cottonmouth Kings",
+    "date": "Friday,  February 10\n      at\n\n      6:00pm",
+    "id": "862111"
+  },
+  {
+    "venueSlug": "spotted-cat",
+    "name": "Smokin' On Some Brass",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "862126"
+  },
+  {
+    "venueSlug": "three-keys-ace-hotel",
+    "name": "Water Seed's Wild Nights",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "864316"
+  },
+  {
+    "venueSlug": "three-keys-ace-hotel",
+    "name": "DJ G",
+    "date": "Friday,  February 10\n      at\n\n      10:30pm",
+    "id": "864321"
+  },
+  {
+    "venueSlug": "three-muses",
+    "name": "Keith Burnstein",
+    "date": "Friday,  February 10\n      at\n\n      5:00pm",
+    "id": "863626"
+  },
+  {
+    "venueSlug": "three-muses",
+    "name": "Giselle Anguizola",
+    "date": "Friday,  February 10\n      at\n\n      8:00pm",
+    "id": "863516"
+  },
+  {
+    "venueSlug": "tipitinas",
+    "name": "Lucero + Justin Wells",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "831936"
+  },
+  {
+    "venueSlug": "toulouse-theatre-0",
+    "name": "Superdome Bodhi: A Tribute to Jerry Garcia ft. Robbie Smith, Brooks Hubbert III, Mi…",
+    "date": "Friday,  February 10\n      at\n\n      10:00pm",
+    "id": "862521"
+  },
+  {
+    "venueSlug": "vintage-voyage",
+    "name": "KatieCat & Cain Jazz Duo",
+    "date": "Friday,  February 10\n      at\n\n      6:00pm",
+    "id": "862846"
+  },
+  {
+    "venueSlug": "woodies-grill-bar",
+    "name": "Claude Hitt & Mike Clark",
+    "date": "Friday,  February 10\n      at\n\n      6:00pm",
+    "id": "856576"
+  },
+  {
+    "venueSlug": "zony-mash-beer-project",
+    "name": "The Rumble: Tribute to The Wild Magnolias",
+    "date": "Friday,  February 10\n      at\n\n      9:00pm",
+    "id": "864111"
+  }
+]

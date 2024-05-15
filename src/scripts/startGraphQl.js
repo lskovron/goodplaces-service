@@ -1,11 +1,11 @@
-import { ApolloServer } from "@apollo/server";
-import { startStandaloneServer } from "@apollo/server/standalone";
-import { config } from "dotenv";
-import { resolvers } from "../graphql/resolvers.js";
-import typeDefs from "../graphql/schema.js";
-import { startMongo } from "../mongo/mongo.js";
+import { ApolloServer } from '@apollo/server';
+import { startStandaloneServer } from '@apollo/server/standalone';
+import { config } from 'dotenv';
+import { resolvers } from '../graphql/resolvers.js';
+import typeDefs from '../graphql/schema.js';
+import { startMongo } from '../mongo/mongo.js';
 
-config({path: '.env'})
+config({ path: '.env' });
 const { MONGO_URI } = process.env;
 
 const server = new ApolloServer({

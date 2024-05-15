@@ -1,11 +1,11 @@
-import axios from "axios";
-import { config } from "dotenv";
+import axios from 'axios';
+import { config } from 'dotenv';
 
-config({path: '.env'})
+config({ path: '.env' });
 const { GOOGLE_API_KEY } = process.env;
 
 export const getVenueInfo = async (venueName) => {
-  const location = "29.9511,-90.0715"; // New Orleans
+  const location = '29.9511,-90.0715'; // New Orleans
   let place;
   await axios
     .get(

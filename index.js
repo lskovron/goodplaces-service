@@ -1,9 +1,9 @@
-import { ApolloServer } from "@apollo/server";
-import { startStandaloneServer } from "@apollo/server/standalone";
+import { ApolloServer } from '@apollo/server';
+import { startStandaloneServer } from '@apollo/server/standalone';
 
-import { resolvers } from "./src/graphql/resolvers.js";
-import typeDefs from "./src/graphql/schema.js";
-import { startMongo } from "./src/mongo/mongo.js";
+import { resolvers } from './src/graphql/resolvers.js';
+import typeDefs from './src/graphql/schema.js';
+import { startMongo } from './src/mongo/mongo.js';
 
 const server = new ApolloServer({
   typeDefs,

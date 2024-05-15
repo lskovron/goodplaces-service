@@ -1,7 +1,7 @@
-version: "2"
+version: '2'
 services:
   mongo:
-    image: "mongo:4.4.12"
-    container_name: "goodplaces-mongo"
+    image: 'mongo:4.4.12'
+    container_name: 'goodplaces-mongo'
     ports:
-      - "27017:27017"
+      - '27017:27017'

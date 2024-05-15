@@ -20,13 +20,14 @@ export default `
   }
 
   type Venue {
-    id: ID!
+    _id: ID!
     slug: String!
     name: String!
     lat: Float
     lng: Float
     address: String
     events: [Event!]!
+    count: Int
   }
 
   type Event {
@@ -49,7 +50,8 @@ export default `
   
   extend type Query {
     events(input: GetEventsInput): [Event!]!
-    eventsByVenue(dateRange: DateRangeInput): [Count!]!
+    eventsByVenue(dateRange: DateRangeInput): [Venue!]!
+    eventsInRange(dateRange: DateRangeInput, limit: Int): [Event!]!
     event(slug: String!): Event!
     venues: [Venue!]!
     venue(slug: String!): Venue!
