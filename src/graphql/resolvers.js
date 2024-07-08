@@ -9,7 +9,9 @@ import {
   getMostRecentHistory,
   getEventsByVenue,
   getAllEventsInRange,
+  updateVenueData,
 } from '../mongo/utils.js';
+import { getVenueInfo } from '../puppeteer/utils/placesApi.js';
 
 export const resolvers = {
   Query: {
@@ -34,6 +36,21 @@ export const resolvers = {
     venue: async (_, args) => {
       const { slug } = args;
       return await getVenue(slug);
+    },
+    venueGeoData: async (_, args) => {
+      const { slug } = args;
+      const { name } = await getVenue(slug);
+      console.log(`Getting place data for venue: ${slug}`);
+      let venue;
+      // @TODO: decide what to do google API errors
+      await getVenueInfo(name).then((res) => {
+        venue = {
+          name,
+          slug,
+          ...res, // lat, lng, address
+        };
+      });
+      return venue;
     },
     event: async (_, args) => {
       const { slug } = args;
@@ -62,6 +79,13 @@ export const resolvers = {
     events: async (parent) => {
       // @TODO: finish this resolver
       return await getAllEvents({ venueSlug: parent.slug });
+    },
+  },
+
+  Mutation: {
+    saveVenueData: async (_, args) => {
+      const { venue } = args;
+      return await updateVenueData(venue);
     },
   },
 };

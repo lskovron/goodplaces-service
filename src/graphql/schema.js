@@ -2,6 +2,7 @@ export default `
   scalar Date
 
   type Query
+  type Mutation
 
   input DateRangeInput {
     start: String!
@@ -30,6 +31,22 @@ export default `
     count: Int
   }
 
+  input VenueDetailsInput {
+    slug: String!
+    name: String!
+    lat: Float
+    lng: Float
+    address: String
+  }
+
+  type VenueDetails {
+    slug: String!
+    name: String!
+    lat: Float
+    lng: Float
+    address: String
+  }
+
   type Event {
     id: ID!
     venue: Venue!
@@ -55,9 +72,14 @@ export default `
     event(slug: String!): Event!
     venues: [Venue!]!
     venue(slug: String!): Venue!
+    venueGeoData(slug: String!): VenueDetails!
     history(dateRange: DateRangeInput!): [History!]!
     fullHistory: [History]!
     date(dateString: String!): History!
+  }
+
+  extend type Mutation {
+    saveVenueData(venue: VenueDetailsInput!): Venue!
   }
 `;
 
