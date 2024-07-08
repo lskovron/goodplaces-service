@@ -1,5 +1,6 @@
-import { eventSchema, historySchema, venueSchema } from './schema.js';
 import mongoose from 'mongoose';
+import { eventSchema, historySchema, venueSchema } from './schema.js';
+import { validateDateRange } from '../puppeteer/utils/parsers.js';
 
 // GETS
 export const getVenue = async (slug) => {
@@ -137,4 +138,16 @@ export const createOrUpdateHistory = async (historyData) => {
     { $set: { hasError, venueErrors, eventErrors, date, dateString } },
     { upsert: true }
   );
+};
+
+export const sortHistories = async ({ start, end }) => {
+  // function will throw an error and abandon the process if dates are invalid
+  const dates = await validateDateRange(start, end);
+  let histories = await getHistories({ start, end });
+  histories = histories.map((history) => history.dateString);
+  const scraped = dates.filter((date) => histories.indexOf(date) > -1);
+  const notScraped = dates.filter((date) => histories.indexOf(date) === -1);
+  console.log('** ALREADY SCRAPED **', scraped);
+  console.log('** NOT SCRAPED **', notScraped);
+  return { scraped, notScraped };
 };

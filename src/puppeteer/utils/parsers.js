@@ -75,11 +75,5 @@ export const getOffsetDate = (dateString, offset) => {
   return date.toISOString().substring(0, 10);
 };
 
-// console.log(getTime("Friday,  February 10\n      at\n\n      6:00pm"));
-// console.log(timeTo24("6:00m"));
-// console.log(await parseEvent({
-//     "venueSlug": "zony-mash-beer-project",
-//     "title": "The Rumble: Tribute to The Wild Magnolias",
-//     "timeString": "Friday,  February 10\n      at\n\n      9:00pm",
-//     "slug": "864111"
-//   }, "2022-2-13"))
+export const excludeDates = ({ range, exclude }) =>
+  range.filter((date) => exclude.indexOf(date) === -1);
