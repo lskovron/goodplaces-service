@@ -4,30 +4,59 @@ import { config } from 'dotenv';
 config({ path: '.env' });
 const { GOOGLE_API_KEY } = process.env;
 
-export const getVenueInfo = async (venueName) => {
+export const getVenuePlacesFromSlug = async (venueName) => {
   const location = '29.9511,-90.0715'; // New Orleans
-  let place;
+  let places;
   await axios
     .get(
-      `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${venueName}&location=${location}&radius=5000&key=${GOOGLE_API_KEY}`
+      `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${venueName}&location=${location}&radius=50&key=${GOOGLE_API_KEY}`
     )
     .then((res) => {
       const { data } = res;
       if (data?.results?.length) {
-        const {
-          formatted_address: address,
-          geometry: {
-            location: { lat, lng },
-          },
-        } = data.results[0];
-        place = {
-          lat,
-          lng,
-          address,
-        };
+        places = data.results.slice(0, 5).map((result) => {
+          const {
+            formatted_address: address,
+            place_id: googleId,
+            geometry: {
+              location: { lat, lng },
+            },
+            rating,
+            types,
+          } = result;
+          return {
+            lat,
+            lng,
+            address,
+            googleId,
+            rating,
+            types,
+          };
+        });
       } else {
         console.error(`${venueName} not found`);
       }
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .then(function () {
+      // always executed
+    });
+
+  return places;
+};
+
+// Not currently in use
+export const getVenueDetails = async (googleId) => {
+  let place;
+  await axios
+    .get(
+      `https://maps.googleapis.com/maps/api/place/details/json?place_id=${googleId}&key=${GOOGLE_API_KEY}`
+    )
+    .then((res) => {
+      console.log(res);
     })
     .catch(function (error) {
       // handle error

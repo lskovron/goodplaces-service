@@ -11,7 +11,7 @@ import {
   getAllEventsInRange,
   updateVenueData,
 } from '../mongo/utils.js';
-import { getVenueInfo } from '../puppeteer/utils/placesApi.js';
+import { getVenueDetails, getVenuePlacesFromSlug } from '../puppeteer/utils/placesApi.js';
 
 export const resolvers = {
   Query: {
@@ -41,16 +41,25 @@ export const resolvers = {
       const { slug } = args;
       const { name } = await getVenue(slug);
       console.log(`Getting place data for venue: ${slug}`);
-      let venue;
       // @TODO: decide what to do google API errors
-      await getVenueInfo(name).then((res) => {
-        venue = {
-          name,
-          slug,
-          ...res, // lat, lng, address
-        };
-      });
-      return venue;
+      const venues = await getVenuePlacesFromSlug(name);
+      return venues.map(({ lat, lng, address, googleId, types, rating }) => ({
+        name,
+        slug,
+        lat,
+        lng,
+        address,
+        googleId,
+        types,
+        rating,
+      }));
+    },
+    // not currently in use
+    venueGeoDetails: async (_, args) => {
+      const { googleId } = args;
+      console.log(`Getting place details for venue: ${googleId}`);
+      await getVenueDetails(googleId);
+      return true;
     },
     event: async (_, args) => {
       const { slug } = args;

@@ -9,6 +9,7 @@ export const venueSchema = new Schema({
   lng: Number,
   address: String,
   googleId: String,
+  rating: Number,
   dateScraped: Date,
   hasError: Boolean,
 });
