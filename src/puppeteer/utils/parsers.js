@@ -44,14 +44,14 @@ export const diffInDays = (start, end) => {
   return diffInDays;
 };
 
-export const validateDateRange = (date1, date2) => {
+export const validateDateRange = (date1, date2, maxLength = 90) => {
   const dates = [];
   const diff = diffInDays(date1, date2);
   const startDate = diff > 0 ? date1 : date2;
   const lengthInDays = Math.abs(diff);
 
-  if (lengthInDays > 90) {
-    throw new Error(`Date range ${date1} to ${date2} exceeds maximum range of 90 days`);
+  if (lengthInDays > maxLength) {
+    throw new Error(`Date range ${date1} to ${date2} exceeds maximum range of ${maxLength} days`);
   }
 
   for (let i = 0; i <= lengthInDays; i++) {

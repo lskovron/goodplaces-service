@@ -144,7 +144,7 @@ export const createOrUpdateHistory = async (historyData) => {
 
 export const sortHistories = async ({ start, end }) => {
   // function will throw an error and abandon the process if dates are invalid
-  const dates = await validateDateRange(start, end);
+  const dates = await validateDateRange(start, end, 365);
   let histories = await getHistories({ start, end });
   histories = histories.map((history) => history.dateString);
   const scraped = dates.filter((date) => histories.indexOf(date) > -1);
