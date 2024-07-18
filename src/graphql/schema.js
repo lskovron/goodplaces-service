@@ -31,6 +31,7 @@ export default `
     count: Int
     googleId: String
     rating: Float
+    businessStatus: String
   }
 
   input VenueDetailsInput {
@@ -40,6 +41,7 @@ export default `
     lng: Float
     address: String
     googleId: String
+    businessStatus: String
     rating: Float
   }
 
@@ -50,6 +52,8 @@ export default `
     lng: Float
     address: String
     googleId: String
+    googleName: String
+    businessStatus: String
     rating: Float
     types: [String]
   }
@@ -79,7 +83,7 @@ export default `
     event(slug: String!): Event!
     venues: [Venue!]!
     venue(slug: String!): Venue!
-    venueGeoData(slug: String!): [VenueDetails]
+    venueGeoData(slug: String!, name: String): [VenueDetails]
     venueGeoDetails(googleId: String!): Boolean!
     history(dateRange: DateRangeInput!): [History!]!
     fullHistory: [History]!

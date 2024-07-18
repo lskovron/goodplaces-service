@@ -12,6 +12,7 @@ export const venueSchema = new Schema({
   rating: Number,
   dateScraped: Date,
   hasError: Boolean,
+  businessStatus: String,
 });
 
 export const eventSchema = new Schema({

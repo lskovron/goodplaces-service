@@ -38,21 +38,32 @@ export const resolvers = {
       return await getVenue(slug);
     },
     venueGeoData: async (_, args) => {
-      const { slug } = args;
-      const { name } = await getVenue(slug);
+      const { slug, name: nameInput } = args;
+      const { name: venueName } = (await getVenue(slug)) || {};
       console.log(`Getting place data for venue: ${slug}`);
-      // @TODO: decide what to do google API errors
-      const venues = await getVenuePlacesFromSlug(name);
-      return venues.map(({ lat, lng, address, googleId, types, rating }) => ({
-        name,
-        slug,
-        lat,
-        lng,
-        address,
-        googleId,
-        types,
-        rating,
-      }));
+      const venues = await getVenuePlacesFromSlug(nameInput || venueName);
+      if (venues.length > 0) {
+        return venues.map(
+          ({ lat, lng, address, googleId, types, rating, businessStatus, googleName }) => ({
+            name: venueName,
+            slug,
+            lat,
+            lng,
+            address,
+            googleId,
+            types,
+            rating,
+            businessStatus,
+            googleName,
+          })
+        );
+      }
+      return [
+        {
+          slug,
+          name: venueName,
+        },
+      ];
     },
     // not currently in use
     venueGeoDetails: async (_, args) => {

@@ -94,6 +94,9 @@ export const getEventsByVenue = async ({ start, end }) => {
         count: { $size: '$events' },
       },
     },
+    {
+      $limit: 100,
+    },
   ]);
   return res;
 };
@@ -108,12 +111,12 @@ export const createOrUpdateVenue = async (venueData) => {
 };
 
 export const updateVenueData = async (venueData) => {
-  const { address, lat, lng, slug, hasError, googleId, rating } = venueData;
+  const { address, lat, lng, slug, hasError, googleId, rating, businessStatus } = venueData;
   const dateScraped = new Date();
   const Venue = mongoose.model('Venue', venueSchema);
   await Venue.updateOne(
     { slug },
-    { $set: { address, lat, lng, hasError, dateScraped, googleId, rating } },
+    { $set: { address, lat, lng, hasError, dateScraped, googleId, rating, businessStatus } },
     { upsert: true }
   );
   const updatedVenue = await getVenue(slug);

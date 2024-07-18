@@ -16,6 +16,8 @@ export const getVenuePlacesFromSlug = async (venueName) => {
       if (data?.results?.length) {
         places = data.results.slice(0, 5).map((result) => {
           const {
+            name: googleName,
+            business_status: businessStatus,
             formatted_address: address,
             place_id: googleId,
             geometry: {
@@ -31,10 +33,13 @@ export const getVenuePlacesFromSlug = async (venueName) => {
             googleId,
             rating,
             types,
+            googleName,
+            businessStatus,
           };
         });
       } else {
         console.error(`${venueName} not found`);
+        places = [];
       }
     })
     .catch(function (error) {
