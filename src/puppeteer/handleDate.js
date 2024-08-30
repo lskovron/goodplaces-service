@@ -13,8 +13,7 @@ const handleDate = async (dateString) => {
   );
 
   if (error) {
-    console.error(error.msg);
-    throw new Error(`Failed to scape date ${dateString} - ${e}`);
+    console.error(`Failed to scape date ${dateString} - ${error.msg}`);
   }
 
   const eventsErr = await processEvents(events, dateString);

@@ -70,32 +70,85 @@ export const getHistories = async ({ start, end }) => {
 export const getEventsByVenue = async ({ start, end }) => {
   const startDate = new Date(start);
   const endDate = new Date(end);
-  const Venue = mongoose.model('Venue', venueSchema);
-  const res = await Venue.aggregate([
+  const Event = mongoose.model('Event', eventSchema);
+  // const res = await Venue.aggregate([
+  //   {
+  //     $lookup: {
+  //       from: 'events',
+  //       localField: 'slug',
+  //       foreignField: 'venueSlug',
+  //       as: 'events',
+  //       pipeline: [{ $match: { date: { $gte: startDate, $lte: endDate } } }],
+  //     },
+  //   },
+  //   {
+  //     $project: {
+  //       id: 1,
+  //       slug: 1,
+  //       name: 1,
+  //       lat: 1,
+  //       lng: 1,
+  //       address: 1,
+  //       googleId: 1,
+  //       rating: 1,
+  //       count: { $size: '$events' },
+  //     },
+  //   },
+  //   {
+  //     $limit: 100,
+  //   },
+  // ])
+  const res = await Event.aggregate([
+    {
+      $match: {
+        date: {
+          $gte: startDate,
+          $lte: endDate,
+        },
+      },
+    },
+    {
+      $group: {
+        _id: '$venueSlug',
+        count: {
+          $sum: 1,
+        },
+      },
+    },
     {
       $lookup: {
-        from: 'events',
-        localField: 'slug',
-        foreignField: 'venueSlug',
-        as: 'events',
-        pipeline: [{ $match: { date: { $gte: startDate, $lte: endDate } } }],
+        from: 'venues',
+        localField: '_id',
+        foreignField: 'slug',
+        as: 'venues',
       },
     },
     {
       $project: {
-        id: 1,
-        slug: 1,
-        name: 1,
-        lat: 1,
-        lng: 1,
-        address: 1,
-        googleId: 1,
-        rating: 1,
-        count: { $size: '$events' },
+        _id: 1,
+        count: 1,
+        venue: {
+          $arrayElemAt: ['$venues', 0],
+        },
       },
     },
     {
-      $limit: 100,
+      $project: {
+        slug: '$venue.slug',
+        name: '$venue.name',
+        count: 1,
+        lat: '$venue.lat',
+        lng: '$venue.lng',
+        address: '$venue.address',
+        rating: '$venue.rating',
+        googleId: '$venue.googleId',
+      },
+    },
+    {
+      $sort: {
+        count: -1,
+        slug: 1,
+      },
     },
   ]);
   return res;
@@ -145,7 +198,7 @@ export const createOrUpdateHistory = async (historyData) => {
   );
 };
 
-export const sortHistories = async ({ start, end }) => {
+export const sortHistories = async ({ start, end }, showScraped = true) => {
   // function will throw an error and abandon the process if dates are invalid
   const dates = await validateDateRange(start, end, 365);
   let histories = await getHistories({ start, end });
@@ -153,6 +206,6 @@ export const sortHistories = async ({ start, end }) => {
   const scraped = dates.filter((date) => histories.indexOf(date) > -1);
   const notScraped = dates.filter((date) => histories.indexOf(date) === -1);
   console.log('** ALREADY SCRAPED **', scraped);
-  console.log('** NOT SCRAPED **', notScraped);
+  if (showScraped) console.log('** NOT SCRAPED **', notScraped);
   return { scraped, notScraped };
 };

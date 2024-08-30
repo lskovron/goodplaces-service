@@ -8,6 +8,13 @@ export const scrapeDate = async (url) => {
   const data = await page.$$eval('.livewire-listing .panel-default', (elements) => {
     let venues = [],
       events = [];
+    if (!elements?.length) {
+      console.error('No events found');
+      return {
+        venues,
+        events,
+      };
+    }
     elements.map((item) => {
       // add venue data to 'venues' array
       const venueHtml = item.querySelector('.panel-title a');

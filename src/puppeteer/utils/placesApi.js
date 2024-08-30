@@ -14,7 +14,7 @@ export const getVenuePlacesFromSlug = async (venueName) => {
     .then((res) => {
       const { data } = res;
       if (data?.results?.length) {
-        places = data.results.slice(0, 5).map((result) => {
+        places = data.results.map((result) => {
           const {
             name: googleName,
             business_status: businessStatus,
