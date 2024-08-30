@@ -75,11 +75,17 @@ export default `
     venueErrors: [String],
     eventErrors: [String],
   }
+
+  type CountByDate {
+    _id: String
+    count: Int
+  }
   
   extend type Query {
     events(input: GetEventsInput): [Event!]!
     eventsByVenue(dateRange: DateRangeInput): [Venue!]!
     eventsInRange(dateRange: DateRangeInput, limit: Int): [Event!]!
+    eventCountByFrame(timeFrame: String): [CountByDate!]!
     event(slug: String!): Event!
     venues: [Venue!]!
     venue(slug: String!): Venue!

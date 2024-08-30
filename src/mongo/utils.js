@@ -154,6 +154,69 @@ export const getEventsByVenue = async ({ start, end }) => {
   return res;
 };
 
+export const getEventCountByTimeFrame = async (timeFrame = 'year') => {
+  const Event = mongoose.model('Event', eventSchema);
+
+  let $project, $addFields, $group;
+  if (timeFrame === 'year' || timeFrame === 'month') {
+    $project = {
+      dateString: {
+        $dateToString: { format: '%Y', date: '$date' },
+      },
+    };
+    $group = {
+      _id: '$dateString',
+      count: {
+        $sum: 1,
+      },
+    };
+
+    if (timeFrame === 'month') {
+      $project.dateString.$dateToString.format.concat('-%m');
+    }
+  } else if (timeFrame === 'week') {
+    $project = {
+      isoWeekYear: {
+        $isoWeekYear: '$date',
+      },
+      isoWeek: {
+        $isoWeek: '$date',
+      },
+      isoDayOfWeek: {
+        $isoDayOfWeek: '$date',
+      },
+    };
+    $addFields = {
+      firstDayOfWeek: {
+        $dateFromParts: {
+          isoWeekYear: '$isoWeekYear',
+          isoWeek: '$isoWeek',
+          isoDayOfWeek: 1,
+        },
+      },
+    };
+    $group = {
+      _id: {
+        $dateToString: {
+          format: '%Y-%m-%d',
+          date: '$firstDayOfWeek',
+        },
+      },
+      count: {
+        $sum: 1,
+      },
+    };
+  }
+
+  const pipeline = [{ $project }, { $group }, { $sort: { _id: 1 } }];
+
+  if (timeFrame === 'week') pipeline.splice(1, 0, { $addFields });
+
+  const res = await Event.aggregate(pipeline);
+
+  return res;
+};
+
 // CREATES & UPDATES
 export const createOrUpdateVenue = async (venueData) => {
   const { slug, name } = venueData;

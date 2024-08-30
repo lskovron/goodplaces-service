@@ -10,6 +10,7 @@ import {
   getEventsByVenue,
   getAllEventsInRange,
   updateVenueData,
+  getEventCountByTimeFrame,
 } from '../mongo/utils.js';
 import { getVenueDetails, getVenuePlacesFromSlug } from '../puppeteer/utils/placesApi.js';
 
@@ -88,6 +89,10 @@ export const resolvers = {
       const earliest = await getEarliestHistory();
       const mostRecent = await getMostRecentHistory();
       return await getHistories({ start: earliest[0].dateString, end: mostRecent[0].dateString });
+    },
+    eventCountByFrame: async (_, args) => {
+      const { timeFrame } = args;
+      return await getEventCountByTimeFrame(timeFrame);
     },
   },
   Event: {
